@@ -51,7 +51,7 @@
 
     html, body {
       max-width: 100%;
-      overflow-x: hidden;
+      
     }
 
     html {
@@ -65,6 +65,7 @@
       color: #1e293b;
       background-color: var(--white);
       line-height: 1.6;
+      overflow-x: clip;
     }
 
     /* Container Utility */
@@ -197,7 +198,7 @@
        HEADER & NAVIGATION (MOBILE HARDENED)
        ========================================================================== */
     header.site-header {
-      position: sticky;
+      position: -webkit-sticky;
       top: 0;
       z-index: 1000;
       background: var(--white);
