@@ -1034,6 +1034,29 @@
 
     @media (max-width: 768px) {
       .header-topbar { display: none; }
+
+      /* Fix Loan Detail Grid & Typography Overflow */
+  #view-loan-detail .grid-2 {
+    grid-template-columns: 1fr !important; /* Overrides inline grid-template-columns */
+    gap: 1.5rem !important;
+  }
+
+  #view-loan-detail #detailTitle {
+    font-size: 1.5rem !important;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  #view-loan-detail ol,
+  #view-loan-detail ul {
+    padding-left: 1rem;
+    margin-left: 0 !important;
+    word-break: break-word;
+  }
+
+  #view-loan-detail .btn {
+    white-space: normal;
+  }
       
       .brand-logo-img {
         height: 36px;
@@ -2723,83 +2746,95 @@
     };
 
     // SPA Routing
-    function navigateTo(viewId) {
-      const navMenu = document.getElementById('mainNavMenu');
-      if (navMenu.classList.contains('mobile-open')) {
-        navMenu.classList.remove('mobile-open');
-      }
+    // Updated navigateTo with history push/replace support
+function navigateTo(viewId, pushHistory = true) {
+  const navMenu = document.getElementById('mainNavMenu');
+  if (navMenu && navMenu.classList.contains('mobile-open')) {
+    navMenu.classList.remove('mobile-open');
+  }
 
-      const views = document.querySelectorAll('.view-page');
-      views.forEach(v => v.classList.remove('active-view'));
+  const views = document.querySelectorAll('.view-page');
+  views.forEach(v => v.classList.remove('active-view'));
 
-      const target = document.getElementById('view-' + viewId);
-      if (target) {
-        target.classList.add('active-view');
-      } else {
-        document.getElementById('view-home').classList.add('active-view');
-      }
+  const target = document.getElementById('view-' + viewId);
+  if (target) {
+    target.classList.add('active-view');
+  } else {
+    document.getElementById('view-home').classList.add('active-view');
+    viewId = 'home';
+  }
 
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(l => l.classList.remove('active'));
-      navLinks.forEach(l => {
-        if (l.getAttribute('onclick') && l.getAttribute('onclick').includes(viewId)) {
-          l.classList.add('active');
-        }
-      });
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      if (window.feather) feather.replace();
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(l => l.classList.remove('active'));
+  navLinks.forEach(l => {
+    if (l.getAttribute('onclick') && l.getAttribute('onclick').includes(viewId)) {
+      l.classList.add('active');
     }
+  });
 
-    function openDetailView(loanKey) {
-      const data = LOAN_REPOSITORY[loanKey];
-      if (!data) return;
+  // Push to browser history so the browser Back/Forward buttons work inside the site
+  if (pushHistory) {
+    history.pushState({ view: viewId }, '', '#' + viewId);
+  }
 
-      document.getElementById('detailEyebrow').textContent = data.eyebrow;
-      document.getElementById('detailTitle').textContent = data.title;
-      document.getElementById('detailOverview').textContent = data.overview;
-      document.getElementById('detailSuitable').textContent = data.suitable;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (window.feather) feather.replace();
+}
 
-      const useCasesUl = document.getElementById('detailUseCases');
-      useCasesUl.innerHTML = '';
-      data.useCases.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        useCasesUl.appendChild(li);
-      });
+// Updated openDetailView with history push
+function openDetailView(loanKey, pushHistory = true) {
+  const data = LOAN_REPOSITORY[loanKey];
+  if (!data) return;
 
-      const processOl = document.getElementById('detailProcessSteps');
-      processOl.innerHTML = '';
-      data.processSteps.forEach(step => {
-        const li = document.createElement('li');
-        li.textContent = step;
-        processOl.appendChild(li);
-      });
+  document.getElementById('detailEyebrow').textContent = data.eyebrow;
+  document.getElementById('detailTitle').textContent = data.title;
+  document.getElementById('detailOverview').textContent = data.overview;
+  document.getElementById('detailSuitable').textContent = data.suitable;
 
-      const docsUl = document.getElementById('detailDocs');
-      docsUl.innerHTML = '';
-      data.docs.forEach(doc => {
-        const li = document.createElement('li');
-        li.style.display = 'flex';
-        li.style.gap = '0.4rem';
-        li.style.alignItems = 'flex-start';
-        li.innerHTML = `<i data-feather="check" style="width:13px;height:13px;color:var(--blue-accent);flex-shrink:0;margin-top:4px;"></i><span>${doc}</span>`;
-        docsUl.appendChild(li);
-      });
+  const useCasesUl = document.getElementById('detailUseCases');
+  useCasesUl.innerHTML = '';
+  data.useCases.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    useCasesUl.appendChild(li);
+  });
 
-      const considerUl = document.getElementById('detailConsiderations');
-      considerUl.innerHTML = '';
-      data.considerations.forEach(c => {
-        const li = document.createElement('li');
-        li.style.display = 'flex';
-        li.style.gap = '0.4rem';
-        li.style.alignItems = 'flex-start';
-        li.innerHTML = `<i data-feather="info" style="width:13px;height:13px;color:var(--navy-900);flex-shrink:0;margin-top:4px;"></i><span>${c}</span>`;
-        considerUl.appendChild(li);
-      });
+  const processOl = document.getElementById('detailProcessSteps');
+  processOl.innerHTML = '';
+  data.processSteps.forEach(step => {
+    const li = document.createElement('li');
+    li.textContent = step;
+    processOl.appendChild(li);
+  });
 
-      navigateTo('loan-detail');
-    }
+  const docsUl = document.getElementById('detailDocs');
+  docsUl.innerHTML = '';
+  data.docs.forEach(doc => {
+    const li = document.createElement('li');
+    li.style.display = 'flex';
+    li.style.gap = '0.4rem';
+    li.style.alignItems = 'flex-start';
+    li.innerHTML = `<i data-feather="check" style="width:13px;height:13px;color:var(--blue-accent);flex-shrink:0;margin-top:4px;"></i><span>${doc}</span>`;
+    docsUl.appendChild(li);
+  });
+
+  const considerUl = document.getElementById('detailConsiderations');
+  considerUl.innerHTML = '';
+  data.considerations.forEach(c => {
+    const li = document.createElement('li');
+    li.style.display = 'flex';
+    li.style.gap = '0.4rem';
+    li.style.alignItems = 'flex-start';
+    li.innerHTML = `<i data-feather="info" style="width:13px;height:13px;color:var(--navy-900);flex-shrink:0;margin-top:4px;"></i><span>${c}</span>`;
+    considerUl.appendChild(li);
+  });
+
+  if (pushHistory) {
+    history.pushState({ view: 'loan-detail', loanKey: loanKey }, '', '#loan-' + loanKey);
+  }
+
+  navigateTo('loan-detail', false);
+}
 
     function toggleMobileNav() {
       const menu = document.getElementById('mainNavMenu');
@@ -2957,6 +2992,44 @@
       if (window.feather) feather.replace();
       updateStepUI();
     });
+
+    // Listen to browser Back and Forward buttons
+window.addEventListener('popstate', (e) => {
+  if (e.state && e.state.view) {
+    if (e.state.view === 'loan-detail' && e.state.loanKey) {
+      openDetailView(e.state.loanKey, false);
+    } else {
+      navigateTo(e.state.view, false);
+    }
+  } else {
+    // Handle initial state or URL hash
+    const hash = window.location.hash.replace('#', '');
+    if (hash.startsWith('loan-')) {
+      const key = hash.replace('loan-', '');
+      openDetailView(key, false);
+    } else if (hash) {
+      navigateTo(hash, false);
+    } else {
+      navigateTo('home', false);
+    }
+  }
+});
+
+// Update the initial DOMContentLoaded block to set base state
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.feather) feather.replace();
+  updateStepUI();
+
+  // Set initial history state or navigate to hash if present
+  const hash = window.location.hash.replace('#', '');
+  if (hash.startsWith('loan-')) {
+    openDetailView(hash.replace('loan-', ''), false);
+  } else if (hash) {
+    navigateTo(hash, false);
+  } else {
+    history.replaceState({ view: 'home' }, '', '#home');
+  }
+});
   </script>
 </body>
 </html>
