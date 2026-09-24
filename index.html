@@ -1,0 +1,3596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bharath Kapital | Strategic Lending Advisory &amp; Financial Consulting</title>
+  <meta name="description" content="Strategic financial consulting and loan facilitation firm helping MSMEs, mid-market businesses, and corporates access institutional credit from banks and NBFCs." />
+
+  <!-- Typography: Inter & Playfair/Plus Jakarta Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Feather Icons for Clean Corporate Vector Symbols -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <style>
+    /* ==========================================================================
+       CORPORATE DESIGN SYSTEM & CSS VARIABLES
+       Deep Navy, Slate, Subdued Steel Accents, Structured Whitespace
+       ========================================================================== */
+    :root {
+      --navy-950: #07111e;
+      --navy-900: #0b1a2d;
+      --navy-850: #10233b;
+      --navy-800: #162d4a;
+      --navy-700: #1f3d63;
+      --blue-accent: #2563eb;
+      --blue-accent-soft: #1d4ed8;
+      --blue-tint: #eff6ff;
+      --steel-500: #64748b;
+      --steel-400: #94a3b8;
+      --steel-200: #e2e8f0;
+      --steel-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --white: #ffffff;
+      --border-subtle: #e2e8f0;
+      --border-navy: #1e3a5f;
+      --shadow-sm: 0 1px 2px 0 rgba(11, 26, 45, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(11, 26, 45, 0.08), 0 2px 4px -2px rgba(11, 26, 45, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(11, 26, 45, 0.08), 0 4px 6px -4px rgba(11, 26, 45, 0.04);
+      --shadow-card: 0 20px 25px -5px rgba(11, 26, 45, 0.04), 0 8px 10px -6px rgba(11, 26, 45, 0.02);
+      --container-max: 1240px;
+      --transition-base: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1e293b;
+      background-color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Architectural Layout & Grid */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    .section-py {
+      padding-top: 5.5rem;
+      padding-bottom: 5.5rem;
+    }
+
+    .section-py-sm {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .bg-light-slate {
+      background-color: var(--slate-50);
+    }
+
+    .bg-deep-navy {
+      background-color: var(--navy-900);
+      color: var(--white);
+    }
+
+    .bg-navy-elevated {
+      background-color: var(--navy-850);
+      border: 1px solid var(--border-navy);
+    }
+
+    /* Institutional Typography */
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--navy-900);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .bg-deep-navy h1, .bg-deep-navy h2, .bg-deep-navy h3, .bg-deep-navy h4 {
+      color: var(--white);
+    }
+
+    .brand-eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.725rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--blue-accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .brand-eyebrow-light {
+      color: #93c5fd;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--steel-500);
+      max-width: 680px;
+      line-height: 1.7;
+    }
+
+    /* Corporate Button Styling */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.6rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: var(--transition-base);
+      cursor: pointer;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--navy-900);
+      color: var(--white);
+      border-color: var(--navy-900);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--navy-800);
+      border-color: var(--navy-800);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-accent {
+      background-color: var(--blue-accent);
+      color: var(--white);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--blue-accent-soft);
+    }
+
+    .btn-outline-white {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--white);
+    }
+
+    .btn-outline-navy {
+      background: transparent;
+      color: var(--navy-900);
+      border-color: var(--steel-200);
+    }
+
+    .btn-outline-navy:hover {
+      background: var(--steel-100);
+      border-color: var(--navy-700);
+    }
+
+    .btn-sm {
+      padding: 0.5rem 1rem;
+      font-size: 0.8125rem;
+    }
+
+    /* Global Header & Nav */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--white);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition-base);
+    }
+
+    .header-topbar {
+      background: var(--navy-950);
+      color: var(--steel-400);
+      font-size: 0.75rem;
+      padding: 0.35rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header-topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top-contact {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .header-top-contact a {
+      color: var(--steel-400);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .header-top-contact a:hover {
+      color: var(--white);
+    }
+
+    .header-main {
+      padding: 0.9rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Brand / Logo Styling */
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 44px;
+      width: auto;
+      max-width: 190px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Fallback Brand Mark if image path resolves to preview */
+    .brand-mark-fallback {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .brand-monogram {
+      width: 42px;
+      height: 42px;
+      background: var(--navy-900);
+      border: 1.5px solid #2563eb;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .brand-text-lockup {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--navy-950);
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .brand-name span {
+      color: var(--blue-accent);
+    }
+
+    .brand-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--steel-500);
+      font-weight: 600;
+    }
+
+    /* Navigation Menu */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: var(--navy-800);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.5rem 0.85rem;
+      border-radius: 4px;
+      transition: var(--transition-base);
+      cursor: pointer;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--blue-accent);
+      background-color: var(--slate-50);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--navy-900);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* View Routing Container */
+    .view-page {
+      display: none;
+    }
+
+    .view-page.active-view {
+      display: block;
+      animation: fadeIn 0.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0.95; transform: translateY(2px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(175deg, #091524 0%, #0d2038 60%, #122846 100%);
+      color: var(--white);
+      padding: 5.5rem 0 5rem 0;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-navy);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 3.25rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 1.35rem;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--steel-400);
+      margin-bottom: 2.25rem;
+      max-width: 580px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-trust-indicators {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .trust-stat-title {
+      font-size: 0.725rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--steel-400);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .trust-stat-val {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    /* Architectural Diagram Box in Hero */
+    .hero-card-display {
+      background: rgba(16, 35, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      padding: 2.25rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    }
+
+    .arch-lead-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(37, 99, 235, 0.18);
+      color: #93c5fd;
+      padding: 0.3rem 0.65rem;
+      font-size: 0.725rem;
+      font-weight: 600;
+      border-radius: 3px;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .arch-flow-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+
+    .arch-flow-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #93c5fd;
+      font-weight: 700;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .arch-flow-text h5 {
+      font-size: 0.925rem;
+      color: var(--white);
+      margin-bottom: 0.15rem;
+    }
+
+    .arch-flow-text p {
+      font-size: 0.775rem;
+      color: var(--steel-400);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Core Disclosures Bar */
+    .regulatory-strip {
+      background: #060e18;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.75rem 0;
+      color: var(--steel-400);
+      font-size: 0.75rem;
+    }
+
+    .regulatory-flex {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Product Grid Cards */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 2rem;
+      transition: var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .product-card:hover {
+      border-color: var(--blue-accent);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+    }
+
+    .product-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--slate-50);
+      border: 1px solid var(--border-subtle);
+      color: var(--navy-900);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      margin-bottom: 1.25rem;
+    }
+
+    .product-card:hover .product-icon {
+      background: var(--navy-900);
+      color: var(--white);
+      border-color: var(--navy-900);
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card p {
+      font-size: 0.875rem;
+      color: var(--steel-500);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+      line-height: 1.55;
+    }
+
+    .product-card-footer {
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-link-btn {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--blue-accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+    }
+
+    .card-link-btn:hover {
+      color: var(--navy-900);
+    }
+
+    /* Process Flow Timeline */
+    .process-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    .process-card {
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      padding: 1.75rem;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .process-num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #94a3b8;
+      margin-bottom: 0.75rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .process-card h4 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: var(--navy-900);
+    }
+
+    .process-card p {
+      font-size: 0.825rem;
+      color: var(--steel-500);
+      line-height: 1.5;
+    }
+
+    /* Pillars of Value / Why Us */
+    .pillar-card {
+      padding: 2rem;
+      background: var(--white);
+      border-left: 3px solid var(--navy-900);
+      border-top: 1px solid var(--border-subtle);
+      border-right: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .pillar-num {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--blue-accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .pillar-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.875rem;
+      color: var(--steel-500);
+      line-height: 1.6;
+    }
+
+    /* Multi-step Eligibility Evaluation Form */
+    .eligibility-shell {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+
+    .shell-header {
+      background: var(--navy-900);
+      color: var(--white);
+      padding: 2rem;
+      border-bottom: 1px solid var(--border-navy);
+    }
+
+    .shell-header h3 {
+      color: var(--white);
+      font-size: 1.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .shell-header p {
+      color: var(--steel-400);
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    .step-progress-bar {
+      height: 4px;
+      background: var(--navy-850);
+      width: 100%;
+    }
+
+    .step-progress-fill {
+      height: 100%;
+      background: var(--blue-accent);
+      width: 8.33%;
+      transition: width 0.3s ease;
+    }
+
+    .step-form-body {
+      padding: 2.5rem;
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .step-counter {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--steel-500);
+      margin-bottom: 0.75rem;
+    }
+
+    .step-pane {
+      display: none;
+    }
+
+    .step-pane.active-step {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    .step-pane h4 {
+      font-size: 1.35rem;
+      color: var(--navy-900);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-pane .step-desc {
+      font-size: 0.875rem;
+      color: var(--steel-500);
+      margin-bottom: 1.5rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      font-size: 0.95rem;
+      border: 1px solid var(--steel-200);
+      border-radius: 4px;
+      font-family: inherit;
+      color: var(--navy-950);
+      outline: none;
+      transition: var(--transition-base);
+    }
+
+    .form-control:focus {
+      border-color: var(--blue-accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .option-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .custom-choice-label {
+      display: flex;
+      align-items: center;
+      padding: 0.9rem 1.1rem;
+      border: 1px solid var(--steel-200);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--navy-800);
+      transition: var(--transition-base);
+      background: var(--white);
+    }
+
+    .custom-choice-label:hover {
+      border-color: var(--blue-accent);
+      background: var(--slate-50);
+    }
+
+    .custom-choice-input {
+      display: none;
+    }
+
+    .custom-choice-input:checked + .custom-choice-label {
+      border-color: var(--blue-accent);
+      background: #eff6ff;
+      color: var(--blue-accent);
+    }
+
+    .step-nav-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 2rem;
+      border-top: 1px solid var(--steel-200);
+      margin-top: 2rem;
+    }
+
+    .form-disclaimer-note {
+      font-size: 0.725rem;
+      color: var(--steel-500);
+      margin-top: 1.25rem;
+      line-height: 1.4;
+    }
+
+    /* Tabbed Sector Detail System */
+    .sector-tabs-nav {
+      display: flex;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 2rem;
+      overflow-x: auto;
+    }
+
+    .sector-tab-btn {
+      padding: 0.85rem 1.35rem;
+      border: none;
+      background: none;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--steel-500);
+      cursor: pointer;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+    }
+
+    .sector-tab-btn.active {
+      color: var(--blue-accent);
+      border-color: var(--blue-accent);
+    }
+
+    .sector-tab-content {
+      display: none;
+    }
+
+    .sector-tab-content.active {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    /* Accordion FAQ */
+    .accordion-list {
+      max-width: 900px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .accordion-header {
+      width: 100%;
+      text-align: left;
+      padding: 1.35rem 0;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy-900);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .accordion-header:hover {
+      color: var(--blue-accent);
+    }
+
+    .accordion-icon {
+      transition: transform 0.2s ease;
+    }
+
+    .accordion-item.open .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s cubic-bezier(0, 1, 0, 1);
+      color: var(--steel-500);
+      font-size: 0.925rem;
+      line-height: 1.65;
+    }
+
+    .accordion-item.open .accordion-content {
+      max-height: 500px;
+      padding-bottom: 1.35rem;
+      transition: max-height 0.25s ease-in-out;
+    }
+
+    /* Editorial Layout for Insights */
+    .insight-featured {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      background: var(--slate-50);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .insight-tag {
+      font-size: 0.725rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .article-lead-item {
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .article-lead-item:last-child {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Corporate Footer */
+    footer.site-footer {
+      background: var(--navy-950);
+      color: var(--steel-400);
+      padding: 4.5rem 0 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr;
+      gap: 3.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-title {
+      color: var(--white);
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-list {
+      list-style: none;
+    }
+
+    .footer-list li {
+      margin-bottom: 0.65rem;
+    }
+
+    .footer-list a {
+      color: var(--steel-400);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition-base);
+      cursor: pointer;
+    }
+
+    .footer-list a:hover {
+      color: var(--white);
+      padding-left: 2px;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .footer-disclaimer-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1.25rem 1.5rem;
+      border-radius: 4px;
+      font-size: 0.775rem;
+      line-height: 1.6;
+      color: var(--steel-400);
+    }
+
+    .footer-credit-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+
+    /* Site-wide Floating Direct Contact Widgets */
+    .floating-contact-panel {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      z-index: 999;
+    }
+
+    .float-badge-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1rem;
+      border-radius: 50px;
+      font-size: 0.775rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-base);
+    }
+
+    .float-whatsapp {
+      background: #15803d;
+      color: #ffffff;
+    }
+
+    .float-whatsapp:hover {
+      background: #166534;
+      transform: translateY(-2px);
+    }
+
+    .float-call {
+      background: var(--navy-900);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .float-call:hover {
+      background: var(--navy-800);
+      transform: translateY(-2px);
+    }
+
+    /* Modal Sheet for Advisory Consultation */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(7, 17, 30, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--white);
+      width: 100%;
+      max-width: 580px;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      animation: modalSlide 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalSlide {
+      from { transform: scale(0.96); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-top {
+      background: var(--navy-900);
+      color: var(--white);
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-top h4 {
+      color: var(--white);
+      margin: 0;
+      font-size: 1.15rem;
+    }
+
+    .modal-close-btn {
+      background: none;
+      border: none;
+      color: var(--steel-400);
+      cursor: pointer;
+    }
+
+    .modal-close-btn:hover {
+      color: var(--white);
+    }
+
+    .modal-body {
+      padding: 1.75rem;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .grid-3, .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .process-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .sector-tab-content.active {
+        grid-template-columns: 1fr;
+      }
+      .insight-featured {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-topbar {
+        display: none;
+      }
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 2px solid var(--border-subtle);
+        box-shadow: var(--shadow-lg);
+      }
+      .nav-menu.mobile-open {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+      .hero-content h1 {
+        font-size: 2.25rem;
+      }
+      .grid-3, .grid-2, .grid-4, .process-container {
+        grid-template-columns: 1fr;
+      }
+      .option-grid, .option-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-credit-strip {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+      .floating-contact-panel {
+        bottom: 1rem;
+        right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP INFORMATIONAL BAR (Non-Flashy, Pure Utility)
+       ========================================================================== -->
+  <div class="header-topbar">
+    <div class="container header-topbar-inner">
+      <div class="header-top-contact">
+        <span><i data-feather="shield" style="width:12px;height:12px;vertical-align:-1px;margin-right:4px;"></i> Institutional Credit Advisory &amp; Loan Facilitation</span>
+        <span>• MSME &amp; Corporate Debt Structuring</span>
+      </div>
+      <div class="header-top-contact">
+        <a href="tel:+919876543210"><i data-feather="phone" style="width:12px;height:12px;"></i> +91 (Advisory Desk)</a>
+        <a href="mailto:advisory@bharathkapital.com"><i data-feather="mail" style="width:12px;height:12px;"></i> advisory@bharathkapital.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       STICKY CLIENT NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-main">
+      <a href="#" class="brand-logo-wrap" onclick="navigateTo('home'); return false;">
+        <!-- Logo Image Reference with Fallback Rendering -->
+        <img 
+          src="images/IMG-20260924-WA0001~2.jpg" 
+          alt="Bharath Kapital Logo" 
+          class="brand-logo-img"
+          onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';" 
+        />
+        <div id="logoFallback" class="brand-mark-fallback" style="display:none;">
+          <div class="brand-monogram">BK</div>
+          <div class="brand-text-lockup">
+            <span class="brand-name">BHARATH <span>KAPITAL</span></span>
+            <span class="brand-tag">Debt Advisory &amp; Consulting</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="nav-menu" id="mainNavMenu">
+        <li><a class="nav-link active" onclick="navigateTo('home')">Home</a></li>
+        <li><a class="nav-link" onclick="navigateTo('about')">About Us</a></li>
+        <li><a class="nav-link" onclick="navigateTo('solutions')">Loan Solutions</a></li>
+        <li><a class="nav-link" onclick="navigateTo('process')">How We Help</a></li>
+        <li><a class="nav-link" onclick="navigateTo('segments')">Who We Serve</a></li>
+        <li><a class="nav-link" onclick="navigateTo('insights')">Insights</a></li>
+        <li><a class="nav-link" onclick="navigateTo('contact')">Contact</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-sm" onclick="navigateTo('eligibility')">
+          <i data-feather="check-circle" style="width:14px;height:14px;"></i> Check Eligibility
+        </button>
+        <button class="mobile-toggle" onclick="toggleMobileNav()" aria-label="Toggle Navigation">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       REGULATORY DISCLOSURE STRIP
+       ========================================================================== -->
+  <div class="regulatory-strip">
+    <div class="container regulatory-flex">
+      <i data-feather="info" style="width:14px;height:14px;flex-shrink:0;color:#93c5fd;"></i>
+      <div>
+        <strong>Advisory Notice:</strong> Bharath Kapital is a loan advisory and financial facilitation firm, not a direct bank or NBFC. Sanctions and terms are exclusively determined by lending institutions.
+      </div>
+    </div>
+  </div>
+
+  <!-- ##########################################################################
+       PAGE VIEW: HOME (Default View)
+       ########################################################################## -->
+  <main id="view-home" class="view-page active-view">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="brand-eyebrow brand-eyebrow-light">Loan Advisory &amp; Debt Syndication</span>
+          <h1>Strategic Funding for Business Growth</h1>
+          <p>
+            Helping MSMEs, mid-market enterprises, and corporates identify suitable funding solutions, connect with the right institutional lenders, and navigate the lending process with clarity.
+          </p>
+          <div class="hero-cta-group">
+            <button class="btn btn-accent" onclick="navigateTo('eligibility')">
+              <i data-feather="check-square" style="width:16px;height:16px;"></i> Check Eligibility
+            </button>
+            <button class="btn btn-outline-white" onclick="navigateTo('solutions')">
+              Explore Loan Solutions <i data-feather="arrow-right" style="width:16px;height:16px;"></i>
+            </button>
+          </div>
+
+          <div class="hero-trust-indicators">
+            <div>
+              <div class="trust-stat-title">Advisory Focus</div>
+              <div class="trust-stat-val">MSMEs &amp; Corporates</div>
+            </div>
+            <div>
+              <div class="trust-stat-title">Lender Network</div>
+              <div class="trust-stat-val">Banks &amp; NBFCs</div>
+            </div>
+            <div>
+              <div class="trust-stat-title">Approach</div>
+              <div class="trust-stat-val">Diagnosis-First</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Institutional Architecture Diagram Panel -->
+        <div class="hero-card-display">
+          <div class="arch-lead-badge">
+            <i data-feather="layers" style="width:12px;height:12px;"></i> Structured Engagement Framework
+          </div>
+
+          <div class="arch-flow-item">
+            <div class="arch-flow-num">01</div>
+            <div class="arch-flow-text">
+              <h5>Financial Assessment</h5>
+              <p>We analyze balance sheet health, cash flows, and credit profiles prior to submission.</p>
+            </div>
+          </div>
+
+          <div class="arch-flow-item">
+            <div class="arch-flow-num">02</div>
+            <div class="arch-flow-text">
+              <h5>Loan Structuring</h5>
+              <p>Matching working capital, term debt, or collateral-free options to genuine requirements.</p>
+            </div>
+          </div>
+
+          <div class="arch-flow-item">
+            <div class="arch-flow-num">03</div>
+            <div class="arch-flow-text">
+              <h5>Institutional Lender Mapping</h5>
+              <p>Connecting cases only with banks and NBFCs with matching credit appetite.</p>
+            </div>
+          </div>
+
+          <div class="arch-flow-item">
+            <div class="arch-flow-num">04</div>
+            <div class="arch-flow-text">
+              <h5>Disbursement Coordination</h5>
+              <p>End-to-end follow-up from query resolution through final execution.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 0.775rem; color: var(--steel-400);">Need case analysis?</span>
+            <button class="btn btn-outline-white btn-sm" onclick="openModal('General Funding Enquiry')">Consult an Advisor</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE VALUE PROPOSITION: DIAGNOSE BEFORE APPLYING -->
+    <section class="section-py bg-light-slate">
+      <div class="container">
+        <div style="text-align: center; max-width: 720px; margin: 0 auto 3.5rem auto;">
+          <span class="brand-eyebrow">The Bharath Kapital Difference</span>
+          <h2 class="section-title">An Advisory-First Credit Methodology</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Unlike transactional loan agents, we treat borrowing as a strategic corporate event. We prepare and position your company so lenders evaluate your real creditworthiness.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <div class="pillar-card">
+            <div class="pillar-num">PILLAR 01</div>
+            <h4>Diagnose Before Applying</h4>
+            <p>We review your financial profile, banking conduct, GST returns, and CIBIL footprint before approaching lenders, minimizing unwarranted application rejections.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">PILLAR 02</div>
+            <h4>Multiple Lender Access</h4>
+            <p>We assist your enterprise in identifying and presenting credit proposals across leading nationalized banks, private banks, and specialized NBFCs.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">PILLAR 03</div>
+            <h4>Transparent Process</h4>
+            <p>Clear guidance on processing expectations, collateral parameters, fee structures, and covenant definitions. No ambiguous promises.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">PILLAR 04</div>
+            <h4>End-to-End Coordination</h4>
+            <p>Dedicated coordination through information requests, sanction letter reviews, legal documentation, and final fund disbursement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED LOAN CATEGORIES PREVIEW -->
+    <section class="section-py">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+          <div>
+            <span class="brand-eyebrow">Financing Capabilities</span>
+            <h2 class="section-title" style="margin-bottom: 0.25rem;">Institutional Loan Solutions</h2>
+            <p class="section-subtitle">Tailored facility options structured around your business lifecycle and balance sheet strength.</p>
+          </div>
+          <div>
+            <button class="btn btn-outline-navy" onclick="navigateTo('solutions')">
+              View All Facilities <i data-feather="arrow-right" style="width:14px;height:14px;"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-3" id="homeProductPreview">
+          <!-- MSME Business Loans -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="briefcase"></i></div>
+            <h3>MSME Business Loans</h3>
+            <p>Structured term financing designed for micro, small, and medium manufacturing and service enterprises seeking operational expansion or modernization.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500); font-weight: 600;">Secured &amp; Unsecured</span>
+              <span class="card-link-btn" onclick="openDetailView('msme')">Learn Details <i data-feather="chevron-right" style="width:14px;height:14px;"></i></span>
+            </div>
+          </div>
+
+          <!-- Working Capital & CC / OD -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="refresh-cw"></i></div>
+            <h3>Working Capital / OD / CC</h3>
+            <p>Revolving lines of credit, Cash Credit (CC), and Overdraft (OD) facilities to stabilize day-to-day cash flow cycles and support order fulfillment.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500); font-weight: 600;">Revolving Credit</span>
+              <span class="card-link-btn" onclick="openDetailView('working-capital')">Learn Details <i data-feather="chevron-right" style="width:14px;height:14px;"></i></span>
+            </div>
+          </div>
+
+          <!-- CGTMSE / Govt Schemes -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="shield"></i></div>
+            <h3>CGTMSE &amp; Scheme Loans</h3>
+            <p>Assistance in structuring collateral-free credit proposals under the Government Credit Guarantee Scheme for eligible small business units.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500); font-weight: 600;">Collateral-Free Cover</span>
+              <span class="card-link-btn" onclick="openDetailView('cgtmse')">Learn Details <i data-feather="chevron-right" style="width:14px;height:14px;"></i></span>
+            </div>
+          </div>
+
+          <!-- Loan Against Property -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="home"></i></div>
+            <h3>Loan Against Property (LAP)</h3>
+            <p>Long-tenure debt structured against commercial, industrial, or residential real estate assets for long-term capitalization needs.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500); font-weight: 600;">Secured Debt</span>
+              <span class="card-link-btn" onclick="openDetailView('lap')">Learn Details <i data-feather="chevron-right" style="width:14px;height:14px;"></i></span>
+            </div>
+          </div>
+
+          <!-- Machinery & Equipment Finance -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="cpu"></i></div>
+            <h3>Machinery &amp; Equipment Finance</h3>
+            <p>Capital asset acquisition loans structured around vendor proforma invoices and production output capacity increases.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500); font-weight: 600;">Asset Acquisition</span>
+              <span class="card-link-btn" onclick="openDetailView('machinery')">Learn Details <i data-feather="chevron-right" style="width:14px;height:14px;"></i></span>
+            </div>
+          </div>
+
+          <!-- Invoice / Bill Discounting -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="file-text"></i></div>
+            <h3>Invoice &amp; Bill Discounting</h3>
+            <p>Immediate liquidity mobilization against verified corporate receivables and accepted bills, unlocking locked operating working funds.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500); font-weight: 600;">Receivables Liquidity</span>
+              <span class="card-link-btn" onclick="openDetailView('discounting')">Learn Details <i data-feather="chevron-right" style="width:14px;height:14px;"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-STEP FACILITATION PROCESS -->
+    <section class="section-py bg-deep-navy">
+      <div class="container">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 3.5rem auto;">
+          <span class="brand-eyebrow brand-eyebrow-light">Structured Execution</span>
+          <h2 style="color: #fff; font-size: 2.25rem;">Our 4-Step Advisory Process</h2>
+          <p style="color: var(--steel-400);">From initial diagnostic to post-sanction coordination, we ensure professional discipline at every credit stage.</p>
+        </div>
+
+        <div class="process-container">
+          <div class="process-card">
+            <div class="process-num">01</div>
+            <h4>Financial Diagnosis</h4>
+            <p>We review audited statements, ITR filings, banking history, current leverage, and underlying cash flows to understand the true borrowing capacity.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">02</div>
+            <h4>Eligibility &amp; Structuring</h4>
+            <p>We formulate an optimal funding proposition—evaluating appropriate security, debt-service coverage, tenor, and facility type.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">03</div>
+            <h4>Lender Mapping</h4>
+            <p>Matching the proposal with institutional banks and NBFCs whose specific risk policies and sector mandates align with your profile.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">04</div>
+            <h4>Sanction &amp; Disbursement</h4>
+            <p>Assistance in clarifying lender queries, submitting supplementary documentation, reviewing terms, and facilitating final disbursement.</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <button class="btn btn-accent" onclick="navigateTo('eligibility')">
+            Begin Initial Financial Review <i data-feather="arrow-right" style="width:16px;height:16px;"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT TESTED SECTORS -->
+    <section class="section-py bg-light-slate">
+      <div class="container">
+        <div style="max-width: 720px; margin-bottom: 2.5rem;">
+          <span class="brand-eyebrow">Sector Focus</span>
+          <h2 class="section-title">Financing Across Key Commercial Segments</h2>
+          <p class="section-subtitle">Every industry segment operates under distinct cash conversion cycles and asset structures. We calibrate debt accordingly.</p>
+        </div>
+
+        <div class="grid-3">
+          <div style="background: var(--white); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.5rem;"><i data-feather="tool" style="width:16px;height:16px;margin-right:6px;color:var(--blue-accent);"></i> Manufacturing Units</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">Capex expansion, industrial machinery purchase, raw material procurement lines, and long-tenor working capital.</p>
+          </div>
+          <div style="background: var(--white); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.5rem;"><i data-feather="truck" style="width:16px;height:16px;margin-right:6px;color:var(--blue-accent);"></i> Wholesale &amp; Trading</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">Inventory stocking cycles, bill discounting, revolving overdrafts, and seasonal liquidity buffers.</p>
+          </div>
+          <div style="background: var(--white); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.5rem;"><i data-feather="activity" style="width:16px;height:16px;margin-right:6px;color:var(--blue-accent);"></i> Service &amp; Technology</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">Receivables-backed debt, collateral-free credit, office infrastructure capex, and working capital lines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL INSIGHTS STRIP -->
+    <section class="section-py">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem;">
+          <div>
+            <span class="brand-eyebrow">Practical Finance Knowledge</span>
+            <h2 class="section-title">Corporate Borrowing Insights</h2>
+            <p class="section-subtitle">Prudent guidance to assist management teams when evaluating debt facilities.</p>
+          </div>
+          <div>
+            <button class="btn btn-outline-navy" onclick="navigateTo('insights')">Read All Articles</button>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div style="border: 1px solid var(--border-subtle); padding: 1.75rem; border-radius: 4px;">
+            <span class="brand-eyebrow" style="font-size: 0.675rem;">Credit Analysis</span>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; line-height: 1.4;">Things to Review Before Applying for a Business Loan</h4>
+            <p style="font-size: 0.825rem; color: var(--steel-500); margin-bottom: 1rem;">Why reviewing your Debt Service Coverage Ratio (DSCR) and GST turnover reconciliation prevents adverse lender scrutiny.</p>
+            <a class="card-link-btn" onclick="navigateTo('insights')">Read Article &rarr;</a>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); padding: 1.75rem; border-radius: 4px;">
+            <span class="brand-eyebrow" style="font-size: 0.675rem;">Government Schemes</span>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; line-height: 1.4;">Understanding Collateral-Free Business Financing</h4>
+            <p style="font-size: 0.825rem; color: var(--steel-500); margin-bottom: 1rem;">A realistic breakdown of CGTMSE criteria, lender internal caps, and credit appraisal parameters for MSMEs.</p>
+            <a class="card-link-btn" onclick="navigateTo('insights')">Read Article &rarr;</a>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); padding: 1.75rem; border-radius: 4px;">
+            <span class="brand-eyebrow" style="font-size: 0.675rem;">Liquidity Management</span>
+            <h4 style="font-size: 1.1rem; margin-bottom: 0.75rem; line-height: 1.4;">How Working Capital Financing Works for Growing Businesses</h4>
+            <p style="font-size: 0.825rem; color: var(--steel-500); margin-bottom: 1rem;">Comparing Cash Credit lines, overdrafts, and structured invoice discounting for sustaining higher supply cycles.</p>
+            <a class="card-link-btn" onclick="navigateTo('insights')">Read Article &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+    <section class="section-py bg-light-slate">
+      <div class="container">
+        <div style="text-align: center; max-width: 640px; margin: 0 auto 3rem auto;">
+          <span class="brand-eyebrow">Clear Answers</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Direct information regarding our advisory role, lender relations, and credit criteria.</p>
+        </div>
+
+        <div class="accordion-list" id="faqAccordion">
+          <!-- Question 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>What does Bharath Kapital do?</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              Bharath Kapital is a debt advisory and loan facilitation firm. We assist MSMEs, business owners, and corporate management teams in evaluating funding requirements, preparing credit documentation, matching proposals with appropriate institutional lenders (banks and NBFCs), and coordinating through sanction and disbursement.
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Does Bharath Kapital directly lend money?</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              No. Bharath Kapital does not directly lend money or act as a deposit-taking entity. All credit facilities, approvals, sanctions, interest rates, and loan disbursals are solely determined and issued by RBI-regulated banks, financial institutions, and NBFCs.
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>How does the loan advisory process work?</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              The process begins with an in-depth financial diagnosis of your balance sheets, GST returns, and banking statements. We then determine the appropriate credit structure (working capital, term loan, LAP, etc.) and map your proposal to lenders with matching underwriting appetite, coordinating the submission and query resolution.
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Do I necessarily need collateral to secure funding?</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              Not always. Depending on your business vintage, turnover, cash flow health, and credit history, your enterprise may qualify for unsecured business loans or government-backed schemes like CGTMSE. However, larger quantum credit or lower-interest term debt typically requires tangible collateral.
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>What documents are generally required for business loans?</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              Standard requirements include: 2 to 3 years of audited Financial Statements (Balance Sheet, Profit &amp; Loss with schedules), 12 months of banking statements, past 12 months of GST returns, business entity KYC (PAN, GST Certificate, Udhyam Registration), and promoters' KYC with CIBIL reports.
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Does loan approval depend on Bharath Kapital?</span>
+              <i data-feather="chevron-down" class="accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              No. Loan sanction, tenor, margin money requirements, and interest rates are determined exclusively by the respective lender's independent credit underwriting committee. Bharath Kapital provides structuring, packaging, and advisory support to present your case favorably and accurately.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="section-py" style="background: linear-gradient(135deg, var(--navy-900) 0%, #153154 100%); color: var(--white); text-align: center;">
+      <div class="container" style="max-width: 780px;">
+        <span class="brand-eyebrow brand-eyebrow-light">Next Steps</span>
+        <h2 style="color: #fff; font-size: 2.25rem; margin-bottom: 1.25rem;">Assess Your Enterprise Borrowing Eligibility</h2>
+        <p style="color: var(--steel-400); font-size: 1.05rem; margin-bottom: 2.25rem;">
+          Complete our structured 12-step preliminary evaluation. Our advisory team will review your parameters and discuss viable institutional credit paths.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-accent" onclick="navigateTo('eligibility')">
+            <i data-feather="clipboard" style="width:16px;height:16px;"></i> Launch Eligibility Form
+          </button>
+          <button class="btn btn-outline-white" onclick="openModal('Direct Executive Consultation')">
+            Book an Advisory Discussion
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ##########################################################################
+       PAGE VIEW: ABOUT US
+       ########################################################################## -->
+  <section id="view-about" class="view-page">
+    <div class="section-py bg-deep-navy">
+      <div class="container" style="max-width: 820px; text-align: center;">
+        <span class="brand-eyebrow brand-eyebrow-light">Corporate Profile</span>
+        <h1 style="color:#fff; font-size: 2.75rem; margin-bottom: 1.25rem;">About Bharath Kapital</h1>
+        <p style="color: var(--steel-400); font-size: 1.15rem; line-height: 1.7;">
+          A specialized financial consulting and lending advisory firm dedicated to connecting businesses with institutional capital.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-py">
+      <div class="container">
+        <div class="grid-2" style="align-items: center; margin-bottom: 4rem;">
+          <div>
+            <span class="brand-eyebrow">Our Mission &amp; Role</span>
+            <h2 class="section-title">Navigating Institutional Debt with Precision</h2>
+            <p style="color: var(--steel-500); margin-bottom: 1.25rem; line-height: 1.7;">
+              Securing enterprise debt in today's banking environment requires thorough financial preparation. At Bharath Kapital, we position ourselves between ambitious business enterprises and regulated institutional lenders.
+            </p>
+            <p style="color: var(--steel-500); margin-bottom: 1.25rem; line-height: 1.7;">
+              <strong>“We understand your business, assess your funding requirement, structure your case, and help connect you with suitable lenders.”</strong>
+            </p>
+            <p style="color: var(--steel-500); line-height: 1.7;">
+              We eliminate the traditional trial-and-error approach that often damages credit profiles through multiple rejections. Instead, we diagnose financial parameters first and submit proposals only where lending appetites match.
+            </p>
+          </div>
+          <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 2.5rem; border-radius: 6px;">
+            <h3 style="margin-bottom: 1.25rem;">Core Advisory Scope</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem;">
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem; color: var(--navy-800);">
+                <i data-feather="check" style="color:var(--blue-accent);width:18px;height:18px;flex-shrink:0;"></i>
+                <span><strong>Business &amp; Financial Assessment:</strong> Evaluating balance sheets and cash flow velocity.</span>
+              </li>
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem; color: var(--navy-800);">
+                <i data-feather="check" style="color:var(--blue-accent);width:18px;height:18px;flex-shrink:0;"></i>
+                <span><strong>Loan Product Selection:</strong> Aligning tenor and structure with business asset lifecycles.</span>
+              </li>
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem; color: var(--navy-800);">
+                <i data-feather="check" style="color:var(--blue-accent);width:18px;height:18px;flex-shrink:0;"></i>
+                <span><strong>Lender Matching:</strong> Access to public sector banks, private banks, and specialized NBFCs.</span>
+              </li>
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem; color: var(--navy-800);">
+                <i data-feather="check" style="color:var(--blue-accent);width:18px;height:18px;flex-shrink:0;"></i>
+                <span><strong>Documentation Structuring:</strong> Compiling credit memos and financial schedules.</span>
+              </li>
+              <li style="display: flex; gap: 0.75rem; font-size: 0.9rem; color: var(--navy-800);">
+                <i data-feather="check" style="color:var(--blue-accent);width:18px;height:18px;flex-shrink:0;"></i>
+                <span><strong>Sanction Coordination:</strong> Clarifying queries and assisting during disbursement formalities.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Institutional Transparency Statement -->
+        <div style="background: #f8fafc; border-left: 4px solid var(--navy-900); padding: 2rem; border-radius: 2px;">
+          <h4 style="margin-bottom: 0.5rem; color: var(--navy-900);">Important Disclosure on Independent Credit Decisions</h4>
+          <p style="font-size: 0.9rem; color: var(--steel-500); margin: 0; line-height: 1.6;">
+            Bharath Kapital does not directly lend money, take public deposits, or issue credit approvals. Loan approval, sanctioned limits, margins, rates, and terms are exclusively determined by the respective lending institutions based on their statutory and internal risk guidelines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ##########################################################################
+       PAGE VIEW: LOAN SOLUTIONS (Comprehensive Catalog)
+       ########################################################################## -->
+  <section id="view-solutions" class="view-page">
+    <div class="section-py bg-deep-navy">
+      <div class="container" style="max-width: 820px; text-align: center;">
+        <span class="brand-eyebrow brand-eyebrow-light">Funding Products</span>
+        <h1 style="color:#fff; font-size: 2.75rem; margin-bottom: 1.25rem;">Institutional Debt Solutions</h1>
+        <p style="color: var(--steel-400); font-size: 1.15rem; line-height: 1.7;">
+          Structured lending options for MSMEs, mid-market businesses, and corporate enterprises across the credit spectrum.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-py">
+      <div class="container">
+        <div class="grid-3" id="allLoanGrid">
+
+          <!-- 1. MSME Loans -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="briefcase"></i></div>
+            <h3>MSME Business Loans</h3>
+            <p>Designed for registered MSME units seeking capital expenditure or term expansion funding with structured repayment options.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Secured / Unsecured</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('msme')">Full Details</button>
+            </div>
+          </div>
+
+          <!-- 2. Unsecured Business Loans -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="zap"></i></div>
+            <h3>Unsecured Business Loans</h3>
+            <p>Collateral-free credit lines appraised against operational banking throughput, audited profitability, and promoter credit scores.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Collateral-Free</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('unsecured')">Full Details</button>
+            </div>
+          </div>
+
+          <!-- 3. Working Capital / CC / OD -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="refresh-cw"></i></div>
+            <h3>Working Capital / OD / CC</h3>
+            <p>Cash Credit limits against hypothecation of inventory and book debts, plus structured overdrafts for operational cash balancing.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Revolving Debt</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('working-capital')">Full Details</button>
+            </div>
+          </div>
+
+          <!-- 4. CGTMSE / Govt Schemes -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="shield"></i></div>
+            <h3>CGTMSE Scheme Loans</h3>
+            <p>Assistance in preparing eligible MSME credit proposals covered under government credit guarantee trust schemes.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Govt Scheme Cover</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('cgtmse')">Full Details</button>
+            </div>
+          </div>
+
+          <!-- 5. Loan Against Property -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="home"></i></div>
+            <h3>Loan Against Property (LAP)</h3>
+            <p>High-quantum, long-tenure financing mortgaging commercial buildings, industrial plots, or self-occupied residential assets.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Real Estate Collateral</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('lap')">Full Details</button>
+            </div>
+          </div>
+
+          <!-- 6. Machinery & Equipment Finance -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="cpu"></i></div>
+            <h3>Machinery &amp; Equipment Finance</h3>
+            <p>Asset financing for plant equipment, industrial tooling, medical devices, and manufacturing machines based on proforma invoices.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Plant &amp; Tooling</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('machinery')">Full Details</button>
+            </div>
+          </div>
+
+          <!-- 7. Corporate Loans -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="trending-up"></i></div>
+            <h3>Corporate Loans &amp; Syndication</h3>
+            <p>Structured debt, consortium lending, and customized credit solutions for mid-market and large corporate entities.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Mid-Corporate / Large</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('corporate')">Full Details</button>
+            </div>
+          </div>
+
+          <!-- 8. Invoice / Bill Discounting -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="file-text"></i></div>
+            <h3>Invoice / Bill Discounting</h3>
+            <p>Immediate cash advances against verified trade invoices raised on reputed institutional corporate buyers and public entities.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Trade Receivables</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('discounting')">Full Details</button>
+            </div>
+          </div>
+
+          <!-- 9. Balance Transfer & Restructuring -->
+          <div class="product-card">
+            <div class="product-icon"><i data-feather="repeat"></i></div>
+            <h3>Balance Transfer &amp; Restructuring</h3>
+            <p>Reviewing existing debt to migrate facilities toward lower financing costs, longer repayment tenors, or top-up enhancements.</p>
+            <div class="product-card-footer">
+              <span style="font-size: 0.775rem; color: var(--steel-500);">Debt Optimization</span>
+              <button class="btn btn-outline-navy btn-sm" onclick="openDetailView('balance-transfer')">Full Details</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ##########################################################################
+       PAGE VIEW: INDIVIDUAL LOAN DETAIL VIEW (Dynamic Content Shell)
+       ########################################################################## -->
+  <section id="view-loan-detail" class="view-page">
+    <div class="section-py-sm bg-light-slate" style="border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <a onclick="navigateTo('solutions')" style="color:var(--steel-500);font-size:0.85rem;font-weight:600;text-decoration:none;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;margin-bottom:0.75rem;">
+          <i data-feather="arrow-left" style="width:14px;height:14px;"></i> Back to Loan Solutions
+        </a>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;">
+          <div>
+            <span class="brand-eyebrow" id="detailEyebrow">Facility Specification</span>
+            <h1 id="detailTitle" style="font-size:2.25rem;">Loan Title</h1>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button class="btn btn-outline-navy btn-sm" onclick="openModal('Enquiry for Facility')">Inquire on Product</button>
+            <button class="btn btn-primary btn-sm" onclick="navigateTo('eligibility')">Check Eligibility</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-py">
+      <div class="container">
+        <div class="grid-2" style="grid-template-columns: 1.25fr 0.75fr; gap: 3rem;">
+          
+          <!-- Detailed breakdown columns -->
+          <div>
+            <div style="margin-bottom: 2.5rem;">
+              <h3 style="margin-bottom: 0.75rem; font-size: 1.35rem;">Facility Overview</h3>
+              <p id="detailOverview" style="color: var(--steel-500); line-height: 1.7; font-size: 0.95rem;"></p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem;">
+              <h3 style="margin-bottom: 0.75rem; font-size: 1.35rem;">Who It Is Suitable For</h3>
+              <p id="detailSuitable" style="color: var(--steel-500); line-height: 1.7; font-size: 0.95rem;"></p>
+            </div>
+
+            <div style="margin-bottom: 2.5rem;">
+              <h3 style="margin-bottom: 0.75rem; font-size: 1.35rem;">Typical Business Use Cases</h3>
+              <ul id="detailUseCases" style="list-style: disc; margin-left: 1.25rem; color: var(--steel-500); line-height: 1.8; font-size: 0.95rem;"></ul>
+            </div>
+
+            <div style="margin-bottom: 2.5rem;">
+              <h3 style="margin-bottom: 0.75rem; font-size: 1.35rem;">How the Process Works</h3>
+              <ol id="detailProcessSteps" style="list-style: decimal; margin-left: 1.25rem; color: var(--steel-500); line-height: 1.8; font-size: 0.95rem;"></ol>
+            </div>
+          </div>
+
+          <!-- Sidebar: Documentation & Eligibility Considerations -->
+          <div>
+            <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px; margin-bottom: 2rem;">
+              <h4 style="margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i data-feather="file-text" style="color:var(--blue-accent);width:18px;height:18px;"></i>
+                Standard Documentation
+              </h4>
+              <ul id="detailDocs" style="list-style: none; font-size: 0.85rem; color: var(--navy-800); display: flex; flex-direction: column; gap: 0.65rem;"></ul>
+            </div>
+
+            <div style="background: var(--white); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+              <h4 style="margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+                <i data-feather="check-square" style="color:var(--navy-900);width:18px;height:18px;"></i>
+                Appraisal Considerations
+              </h4>
+              <ul id="detailConsiderations" style="list-style: none; font-size: 0.85rem; color: var(--steel-500); display: flex; flex-direction: column; gap: 0.65rem;"></ul>
+              
+              <div style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+                <button class="btn btn-primary" style="width: 100%;" onclick="navigateTo('eligibility')">Check Eligibility Now</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ##########################################################################
+       PAGE VIEW: HOW WE HELP (Methodology & Process)
+       ########################################################################## -->
+  <section id="view-process" class="view-page">
+    <div class="section-py bg-deep-navy">
+      <div class="container" style="max-width: 820px; text-align: center;">
+        <span class="brand-eyebrow brand-eyebrow-light">Process &amp; Methodology</span>
+        <h1 style="color:#fff; font-size: 2.75rem; margin-bottom: 1.25rem;">How Bharath Kapital Helps</h1>
+        <p style="color: var(--steel-400); font-size: 1.15rem; line-height: 1.7;">
+          Our disciplined, four-stage financial diagnostic process minimizes rejections and accelerates institutional sanction times.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-py">
+      <div class="container" style="max-width: 960px;">
+        
+        <!-- Step 1 -->
+        <div style="display: flex; gap: 2.5rem; margin-bottom: 4rem; position: relative;">
+          <div style="font-size: 2.5rem; font-weight: 800; color: #cbd5e1; width: 60px; flex-shrink: 0; line-height: 1;">01</div>
+          <div>
+            <span class="brand-eyebrow">Phase 01</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Comprehensive Financial Diagnosis</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1rem;">
+              Before approaching any bank or NBFC, we conduct an exhaustive diagnostic of your financial footprint. We review your profit &amp; loss statements, balance sheet ratios, bank statement turnover velocity, debt-service coverage (DSCR), and promoter CIBIL history.
+            </p>
+            <p style="color: var(--steel-500); line-height: 1.7;">
+              <strong>Outcome:</strong> Clear visibility into how bank underwriting algorithms and risk managers will view your credit risk.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div style="display: flex; gap: 2.5rem; margin-bottom: 4rem; position: relative;">
+          <div style="font-size: 2.5rem; font-weight: 800; color: #cbd5e1; width: 60px; flex-shrink: 0; line-height: 1;">02</div>
+          <div>
+            <span class="brand-eyebrow">Phase 02</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Debt Eligibility &amp; Product Structuring</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1rem;">
+              Selecting the wrong debt structure leads to cash flow strain. We structure your borrowing need into the right vehicles—balancing revolving working capital limits with long-term amortizing facilities, equipment debt, or collateral-free schemes.
+            </p>
+            <p style="color: var(--steel-500); line-height: 1.7;">
+              <strong>Outcome:</strong> A bankable credit brief that matches your operational cash conversion cycle.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div style="display: flex; gap: 2.5rem; margin-bottom: 4rem; position: relative;">
+          <div style="font-size: 2.5rem; font-weight: 800; color: #cbd5e1; width: 60px; flex-shrink: 0; line-height: 1;">03</div>
+          <div>
+            <span class="brand-eyebrow">Phase 03</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Institutional Lender Mapping</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1rem;">
+              Lenders maintain fluctuating sector appetites, internal geographical caps, and collateral preferences. We match your structured credit proposal only to those institutions whose current policy criteria fit your company profile.
+            </p>
+            <p style="color: var(--steel-500); line-height: 1.7;">
+              <strong>Outcome:</strong> Elimination of speculative multiple filings that trigger negative bureau inquiries.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div style="display: flex; gap: 2.5rem; margin-bottom: 3rem; position: relative;">
+          <div style="font-size: 2.5rem; font-weight: 800; color: #cbd5e1; width: 60px; flex-shrink: 0; line-height: 1;">04</div>
+          <div>
+            <span class="brand-eyebrow">Phase 04</span>
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Application, Sanction &amp; Disbursement Support</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1rem;">
+              The credit journey does not end with proposal submission. We assist through documentation clarification, credit manager queries, legal vetting, title verification, valuation checks, and final loan documentation execution.
+            </p>
+            <p style="color: var(--steel-500); line-height: 1.7;">
+              <strong>Outcome:</strong> Smooth disbursement into your company bank account with verified sanction terms.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; padding-top: 2rem;">
+          <button class="btn btn-primary" onclick="navigateTo('eligibility')">Evaluate Your Eligibility With An Advisor</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ##########################################################################
+       PAGE VIEW: WHO WE SERVE (Sector Breakdown)
+       ########################################################################## -->
+  <section id="view-segments" class="view-page">
+    <div class="section-py bg-deep-navy">
+      <div class="container" style="max-width: 820px; text-align: center;">
+        <span class="brand-eyebrow brand-eyebrow-light">Target Client Base</span>
+        <h1 style="color:#fff; font-size: 2.75rem; margin-bottom: 1.25rem;">Who We Serve</h1>
+        <p style="color: var(--steel-400); font-size: 1.15rem; line-height: 1.7;">
+          Focused debt advisory for commercial operators, manufacturers, traders, and high-growth mid-market enterprises.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-py">
+      <div class="container">
+        
+        <!-- Tab Navigation for Segments -->
+        <div class="sector-tabs-nav">
+          <button class="sector-tab-btn active" onclick="switchSectorTab(event, 'sec-mfg')">Manufacturers</button>
+          <button class="sector-tab-btn" onclick="switchSectorTab(event, 'sec-trd')">Traders &amp; Distributors</button>
+          <button class="sector-tab-btn" onclick="switchSectorTab(event, 'sec-srv')">Service Businesses</button>
+          <button class="sector-tab-btn" onclick="switchSectorTab(event, 'sec-msme')">MSMEs</button>
+          <button class="sector-tab-btn" onclick="switchSectorTab(event, 'sec-stp')">Startups / Growing</button>
+          <button class="sector-tab-btn" onclick="switchSectorTab(event, 'sec-corp')">Mid-Market Corporates</button>
+        </div>
+
+        <!-- Content: Manufacturers -->
+        <div id="sec-mfg" class="sector-tab-content active">
+          <div>
+            <span class="brand-eyebrow">Capital Heavy &amp; Asset Backed</span>
+            <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Manufacturing Enterprises</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1.25rem;">
+              Manufacturing businesses operate with lengthy working capital cycles—from raw material purchase through work-in-progress and credit-driven client receivables.
+            </p>
+            <h5 style="margin-bottom: 0.5rem;">Typical Funding Requirements:</h5>
+            <ul style="list-style: disc; margin-left: 1.2rem; color: var(--steel-500); margin-bottom: 1.5rem; line-height: 1.7;">
+              <li>Plant &amp; heavy machinery acquisition loans</li>
+              <li>Revolving Cash Credit (CC) limits based on inventory</li>
+              <li>Letter of Credit (LC) and Bank Guarantees (BG) for suppliers</li>
+              <li>Industrial factory premise acquisition debt</li>
+            </ul>
+            <button class="btn btn-outline-navy btn-sm" onclick="navigateTo('eligibility')">Check Eligibility</button>
+          </div>
+          <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.75rem;">Key Underwriting Parameters</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">
+              Lenders focus on machinery capacity utilization, debtor holding period, raw material price volatility buffers, and DSCR metrics over the projected term.
+            </p>
+          </div>
+        </div>
+
+        <!-- Content: Traders -->
+        <div id="sec-trd" class="sector-tab-content">
+          <div>
+            <span class="brand-eyebrow">Fast Turnover &amp; Inventory</span>
+            <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Traders &amp; Distributors</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1.25rem;">
+              Wholesale trading and distribution companies require agile credit lines to quickly capture bulk purchasing discounts and service market volume spikes.
+            </p>
+            <h5 style="margin-bottom: 0.5rem;">Typical Funding Requirements:</h5>
+            <ul style="list-style: disc; margin-left: 1.2rem; color: var(--steel-500); margin-bottom: 1.5rem; line-height: 1.7;">
+              <li>Overdraft (OD) facilities against banking conduct</li>
+              <li>Invoice discounting for institutional buyers</li>
+              <li>Warehouse inventory finance</li>
+              <li>Collateral-free short-term working capital</li>
+            </ul>
+            <button class="btn btn-outline-navy btn-sm" onclick="navigateTo('eligibility')">Check Eligibility</button>
+          </div>
+          <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.75rem;">Key Underwriting Parameters</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">
+              Underwriters examine GST return reconciliation, debtor concentration risk, inventory aging records, and average bank account credit turnover.
+            </p>
+          </div>
+        </div>
+
+        <!-- Content: Service Businesses -->
+        <div id="sec-srv" class="sector-tab-content">
+          <div>
+            <span class="brand-eyebrow">Human Capital &amp; Contracts</span>
+            <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Service Businesses</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1.25rem;">
+              IT vendors, logistics operators, facility management, and consulting firms often lack substantial physical assets, making traditional collateral loans difficult.
+            </p>
+            <h5 style="margin-bottom: 0.5rem;">Typical Funding Requirements:</h5>
+            <ul style="list-style: disc; margin-left: 1.2rem; color: var(--steel-500); margin-bottom: 1.5rem; line-height: 1.7;">
+              <li>Unsecured business loans based on EBITDA</li>
+              <li>Factoring and discounting of service milestone billings</li>
+              <li>Office infrastructure and tech equipment leasing</li>
+            </ul>
+            <button class="btn btn-outline-navy btn-sm" onclick="navigateTo('eligibility')">Check Eligibility</button>
+          </div>
+          <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.75rem;">Key Underwriting Parameters</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">
+              Lenders focus on corporate client quality, master service agreements (MSAs), recurring contract tenure, and historical margin stability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Content: MSMEs -->
+        <div id="sec-msme" class="sector-tab-content">
+          <div>
+            <span class="brand-eyebrow">Priority Sector &amp; Small Enterprises</span>
+            <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">MSMEs</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1.25rem;">
+              Registered micro, small, and medium businesses seeking to capitalize on government support schemes, collateral exemptions, and priority sector mandates.
+            </p>
+            <h5 style="margin-bottom: 0.5rem;">Typical Funding Requirements:</h5>
+            <ul style="list-style: disc; margin-left: 1.2rem; color: var(--steel-500); margin-bottom: 1.5rem; line-height: 1.7;">
+              <li>CGTMSE covered collateral-free loans</li>
+              <li>Machinery term loans under subsidy frameworks</li>
+              <li>Micro enterprise enhancement lines</li>
+            </ul>
+            <button class="btn btn-outline-navy btn-sm" onclick="navigateTo('eligibility')">Check Eligibility</button>
+          </div>
+          <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.75rem;">Key Underwriting Parameters</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">
+              Udyam registration validation, minimum 3 years vintage, consistent ITR filing discipline, and absence of past restructuring or defaults.
+            </p>
+          </div>
+        </div>
+
+        <!-- Content: Startups -->
+        <div id="sec-stp" class="sector-tab-content">
+          <div>
+            <span class="brand-eyebrow">Early Stage Growth</span>
+            <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Growing Businesses &amp; Startups</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1.25rem;">
+              Post-revenue enterprises with validated product-market fit seeking venture debt or working capital without substantial equity dilution.
+            </p>
+            <h5 style="margin-bottom: 0.5rem;">Typical Funding Requirements:</h5>
+            <ul style="list-style: disc; margin-left: 1.2rem; color: var(--steel-500); margin-bottom: 1.5rem; line-height: 1.7;">
+              <li>Receivables discounting against enterprise clients</li>
+              <li>Revenue-linked debt financing</li>
+              <li>Promoter asset-backed commercial credit</li>
+            </ul>
+            <button class="btn btn-outline-navy btn-sm" onclick="navigateTo('eligibility')">Check Eligibility</button>
+          </div>
+          <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.75rem;">Realistic Underwriting Context</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">
+              Pure pre-revenue concepts cannot obtain standard debt from Indian commercial banks. Lenders require demonstrated sales, audited financials, or personal guarantor backing.
+            </p>
+          </div>
+        </div>
+
+        <!-- Content: Corporates -->
+        <div id="sec-corp" class="sector-tab-content">
+          <div>
+            <span class="brand-eyebrow">Mid-Market &amp; Corporate</span>
+            <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">Corporates &amp; Large Entities</h3>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1.25rem;">
+              Corporations requiring multi-bank syndication, consortium structuring, large Capex financing, or debt restructuring to optimize interest costs.
+            </p>
+            <h5 style="margin-bottom: 0.5rem;">Typical Funding Requirements:</h5>
+            <ul style="list-style: disc; margin-left: 1.2rem; color: var(--steel-500); margin-bottom: 1.5rem; line-height: 1.7;">
+              <li>Multiple banking consortium credit arrangements</li>
+              <li>Large project finance and Capex lines</li>
+              <li>Corporate debt takeover with margin enhancement</li>
+            </ul>
+            <button class="btn btn-outline-navy btn-sm" onclick="navigateTo('eligibility')">Check Eligibility</button>
+          </div>
+          <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <h4 style="margin-bottom: 0.75rem;">Key Underwriting Parameters</h4>
+            <p style="font-size: 0.875rem; color: var(--steel-500); line-height: 1.6;">
+              External credit rating (CRISIL, ICRA, CARE), group net worth, contingent liabilities assessment, and detailed project viability studies.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ##########################################################################
+       PAGE VIEW: EDITORIAL INSIGHTS / BLOG
+       ########################################################################## -->
+  <section id="view-insights" class="view-page">
+    <div class="section-py bg-deep-navy">
+      <div class="container" style="max-width: 820px; text-align: center;">
+        <span class="brand-eyebrow brand-eyebrow-light">Financial Knowledge Base</span>
+        <h1 style="color:#fff; font-size: 2.75rem; margin-bottom: 1.25rem;">Credit &amp; Funding Insights</h1>
+        <p style="color: var(--steel-400); font-size: 1.15rem; line-height: 1.7;">
+          Institutional perspectives on MSME debt, collateral schemes, working capital structures, and lender evaluation standards.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-py">
+      <div class="container">
+        
+        <!-- Featured Editorial Piece -->
+        <div class="insight-featured">
+          <div>
+            <span class="insight-tag">Strategic Advisory Brief</span>
+            <h2 style="font-size: 1.85rem; margin-bottom: 1rem; line-height: 1.3;">Things to Review Before Applying for a Commercial Business Loan</h2>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 1.5rem;">
+              When corporate management approaches commercial banks for expansion debt, underwriting rejections rarely stem from lack of business vision. They typically arise from unaligned financial schedules, unverified GST-to-banking variances, or poor Debt Service Coverage Ratios (DSCR). Here is an internal checklist every finance head must verify before initiating submissions.
+            </p>
+            <div style="font-size: 0.85rem; color: var(--steel-500);">
+              <span>Published by Bharath Kapital Research</span> • <span>6 min read</span>
+            </div>
+          </div>
+          <div style="border-left: 1px solid var(--border-subtle); padding-left: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h4 style="margin-bottom: 0.75rem;">Core Checkpoints Covered:</h4>
+              <ul style="list-style: disc; margin-left: 1rem; font-size: 0.85rem; color: var(--steel-500); line-height: 1.8;">
+                <li>Calculating DSCR benchmarked at minimum 1.25x</li>
+                <li>Audited Balance Sheet vs. 3B GST Turnover reconciliation</li>
+                <li>Promoter bureau records and active guarantees</li>
+                <li>Cheque return percentages in primary current accounts</li>
+              </ul>
+            </div>
+            <button class="btn btn-outline-navy btn-sm" onclick="openModal('Request Full Whitepaper: Loan Application Checklist')">Request Complete Checklist</button>
+          </div>
+        </div>
+
+        <!-- Editorial Articles Grid -->
+        <div class="grid-3">
+          
+          <div style="border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <div class="insight-tag">MSME Scheme Review</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; line-height: 1.4;">Understanding Collateral-Free Business Financing (CGTMSE)</h3>
+            <p style="font-size: 0.85rem; color: var(--steel-500); line-height: 1.6; margin-bottom: 1.25rem;">
+              While government circulars mention credit guarantee coverage up to designated caps, banks enforce strict internal scoring metrics before sanctioning unsecured MSME debt.
+            </p>
+            <a class="card-link-btn" onclick="openModal('Read Article: CGTMSE Realities')">Read Analysis &rarr;</a>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <div class="insight-tag">Working Capital</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; line-height: 1.4;">Cash Credit (CC) vs. Overdraft (OD) vs. Invoice Discounting</h3>
+            <p style="font-size: 0.85rem; color: var(--steel-500); line-height: 1.6; margin-bottom: 1.25rem;">
+              A comparative analysis of revolving working capital options, their drawing power calculations, monthly stock statement requirements, and interest impacts.
+            </p>
+            <a class="card-link-btn" onclick="openModal('Read Article: Working Capital Structures')">Read Analysis &rarr;</a>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <div class="insight-tag">Credit Optimization</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; line-height: 1.4;">How CIBIL and Commercial Bureau Scores Affect Lender Sanctions</h3>
+            <p style="font-size: 0.85rem; color: var(--steel-500); line-height: 1.6; margin-bottom: 1.25rem;">
+              How commercial credit rank (CMR) and personal director scores determine not only approval probability, but also final interest rate spreads and collateral demands.
+            </p>
+            <a class="card-link-btn" onclick="openModal('Read Article: Credit Score Optimization')">Read Analysis &rarr;</a>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <div class="insight-tag">Asset Finance</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; line-height: 1.4;">Financing Industrial Machinery: Direct Term Loans vs Leasing</h3>
+            <p style="font-size: 0.85rem; color: var(--steel-500); line-height: 1.6; margin-bottom: 1.25rem;">
+              Tax treatment, depreciation benefits, and down-payment considerations when adding capital machinery to high-output manufacturing plants.
+            </p>
+            <a class="card-link-btn" onclick="openModal('Read Article: Machinery Financing Strategy')">Read Analysis &rarr;</a>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <div class="insight-tag">Debt Advisory</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; line-height: 1.4;">When Does a Balance Transfer &amp; Debt Enhancement Make Sense?</h3>
+            <p style="font-size: 0.85rem; color: var(--steel-500); line-height: 1.6; margin-bottom: 1.25rem;">
+              Calculating foreclosure charges, stamp duties, and processing fees to ensure an external debt takeover actually yields net operational savings.
+            </p>
+            <a class="card-link-btn" onclick="openModal('Read Article: Balance Transfer Evaluation')">Read Analysis &rarr;</a>
+          </div>
+
+          <div style="border: 1px solid var(--border-subtle); padding: 2rem; border-radius: 4px;">
+            <div class="insight-tag">Documentation</div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.75rem; line-height: 1.4;">Essential Financial Schedules Demanded by Bank Underwriters</h3>
+            <p style="font-size: 0.85rem; color: var(--steel-500); line-height: 1.6; margin-bottom: 1.25rem;">
+              Why submitting clean, CMA (Credit Monitoring Arrangement) data aligned with past audited results cuts institutional sanction turnaround time by half.
+            </p>
+            <a class="card-link-btn" onclick="openModal('Read Article: CMA Documentation Mastery')">Read Analysis &rarr;</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ##########################################################################
+       PAGE VIEW: CONTACT US
+       ########################################################################## -->
+  <section id="view-contact" class="view-page">
+    <div class="section-py bg-deep-navy">
+      <div class="container" style="max-width: 820px; text-align: center;">
+        <span class="brand-eyebrow brand-eyebrow-light">Advisory Desk</span>
+        <h1 style="color:#fff; font-size: 2.75rem; margin-bottom: 1.25rem;">Contact Bharath Kapital</h1>
+        <p style="color: var(--steel-400); font-size: 1.15rem; line-height: 1.7;">
+          Schedule an introductory case review with our credit advisory specialists.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-py">
+      <div class="container">
+        <div class="grid-2" style="gap: 3.5rem;">
+          
+          <!-- Contact Channels Info -->
+          <div>
+            <span class="brand-eyebrow">Direct Touchpoints</span>
+            <h2 class="section-title">Discuss Your Commercial Funding Requirement</h2>
+            <p style="color: var(--steel-500); line-height: 1.7; margin-bottom: 2rem;">
+              Our senior advisory team is available for structured corporate discussions. We maintain rigorous client confidentiality across all submitted financial records.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem;">
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width:40px;height:40px;background:var(--slate-50);border:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:center;border-radius:4px;color:var(--navy-900);">
+                  <i data-feather="map-pin"></i>
+                </div>
+                <div>
+                  <h5 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Office Location</h5>
+                  <p style="font-size: 0.85rem; color: var(--steel-500); margin: 0;">
+                    Corporate Advisory Office<br />
+                    Commercial Business District<br />
+                    Vadodara, Gujarat, India
+                  </p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width:40px;height:40px;background:var(--slate-50);border:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:center;border-radius:4px;color:var(--navy-900);">
+                  <i data-feather="mail"></i>
+                </div>
+                <div>
+                  <h5 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Email Advisory Desk</h5>
+                  <p style="font-size: 0.85rem; color: var(--steel-500); margin: 0;">
+                    advisory@bharathkapital.com<br />
+                    proposals@bharathkapital.com
+                  </p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width:40px;height:40px;background:var(--slate-50);border:1px solid var(--border-subtle);display:flex;align-items:center;justify-content:center;border-radius:4px;color:var(--navy-900);">
+                  <i data-feather="phone-call"></i>
+                </div>
+                <div>
+                  <h5 style="font-size: 0.95rem; margin-bottom: 0.2rem;">Telephone &amp; WhatsApp</h5>
+                  <p style="font-size: 0.85rem; color: var(--steel-500); margin: 0;">
+                    Direct Line: +91 (Advisory Desk)<br />
+                    Mon – Sat, 9:30 AM to 6:30 PM IST
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div style="background: var(--slate-50); border: 1px solid var(--border-subtle); padding: 1.5rem; border-radius: 4px;">
+              <h5 style="margin-bottom: 0.4rem;">Confidentiality Commitment</h5>
+              <p style="font-size: 0.8rem; color: var(--steel-500); margin: 0; line-height: 1.5;">
+                All financial documentation, GST records, and tax filings shared with Bharath Kapital are kept strictly confidential and shared only with accredited lenders upon client authorization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Formal Enquiry Form -->
+          <div style="background: var(--white); border: 1px solid var(--border-subtle); padding: 2.5rem; border-radius: 6px; box-shadow: var(--shadow-sm);">
+            <h3 style="margin-bottom: 0.5rem; font-size: 1.35rem;">Send Formal Enquiry</h3>
+            <p style="font-size: 0.85rem; color: var(--steel-500); margin-bottom: 1.75rem;">
+              Provide preliminary business details. A senior consultant will respond within 24 business hours.
+            </p>
+
+            <form id="contactPageForm" onsubmit="handleContactSubmit(event)">
+              <div style="margin-bottom: 1.2rem;">
+                <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.4rem; color:var(--navy-900);">Business / Entity Name *</label>
+                <input type="text" required class="form-control" placeholder="e.g. Acme Precision Tools Pvt Ltd" />
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem;">
+                <div>
+                  <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.4rem; color:var(--navy-900);">Contact Person *</label>
+                  <input type="text" required class="form-control" placeholder="Full Name" />
+                </div>
+                <div>
+                  <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.4rem; color:var(--navy-900);">Phone Number *</label>
+                  <input type="tel" required class="form-control" placeholder="Mobile / WhatsApp" />
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem;">
+                <div>
+                  <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.4rem; color:var(--navy-900);">Official Email *</label>
+                  <input type="email" required class="form-control" placeholder="email@company.com" />
+                </div>
+                <div>
+                  <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.4rem; color:var(--navy-900);">Funding Requirement</label>
+                  <select class="form-control">
+                    <option>Working Capital / CC / OD</option>
+                    <option>MSME Business Loan</option>
+                    <option>Machinery &amp; Equipment Debt</option>
+                    <option>Loan Against Property</option>
+                    <option>CGTMSE Scheme Loan</option>
+                    <option>Invoice Discounting</option>
+                    <option>Balance Transfer / Restructuring</option>
+                    <option>Corporate Financing</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 1.5rem;">
+                <label style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:0.4rem; color:var(--navy-900);">Brief Overview of Funding Requirement</label>
+                <textarea class="form-control" rows="4" placeholder="Mention tentative loan quantum, current turnover, and purpose of funding..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Submit Funding Enquiry <i data-feather="send" style="width:14px;height:14px;"></i>
+              </button>
+
+              <div id="contactSuccessMsg" style="display:none; margin-top:1rem; padding:0.85rem; background:#ecfdf5; border:1px solid #10b981; color:#065f46; border-radius:4px; font-size:0.85rem; text-align:center;">
+                Thank you. Your inquiry has been registered. An advisor will contact you within 24 business hours.
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ##########################################################################
+       PAGE VIEW: DEDICATED 12-STEP ELIGIBILITY WIZARD
+       ########################################################################## -->
+  <section id="view-eligibility" class="view-page">
+    <div class="section-py-sm bg-light-slate" style="border-bottom: 1px solid var(--border-subtle);">
+      <div class="container" style="text-align: center;">
+        <span class="brand-eyebrow">Preliminary Assessment</span>
+        <h1 style="font-size: 2.25rem;">Business Credit Eligibility Check</h1>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Complete this 12-step preliminary evaluation. We will analyze your inputs against current institutional lending guidelines.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-py">
+      <div class="container">
+        
+        <div class="eligibility-shell">
+          <!-- Shell Header -->
+          <div class="shell-header">
+            <h3>Enterprise Credit Readiness Assessment</h3>
+            <p>Non-binding preliminary diagnosis for MSMEs, mid-market businesses, and corporate borrowers.</p>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="step-progress-bar">
+            <div class="step-progress-fill" id="progressFill"></div>
+          </div>
+
+          <!-- Wizard Body -->
+          <div class="step-form-body">
+            
+            <form id="multiStepForm" onsubmit="handleEligibilitySubmit(event)">
+              <div class="step-counter" id="stepCounterText">Step 1 of 12</div>
+
+              <!-- STEP 1: Business Name -->
+              <div class="step-pane active-step" id="step-1">
+                <h4>What is the registered name of your business?</h4>
+                <p class="step-desc">Enter the commercial entity or trading name as registered with GST / MCA.</p>
+                <input type="text" id="input-bizname" class="form-control" placeholder="e.g. Apex Industrial Solutions" required />
+              </div>
+
+              <!-- STEP 2: Business Type -->
+              <div class="step-pane" id="step-2">
+                <h4>What is your core business activity?</h4>
+                <p class="step-desc">Lenders evaluate operating cycles based on business category classification.</p>
+                <div class="option-grid">
+                  <label>
+                    <input type="radio" name="bizType" value="Manufacturing" class="custom-choice-input" checked />
+                    <span class="custom-choice-label"><i data-feather="tool" style="width:16px;height:16px;margin-right:8px;"></i> Manufacturing</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="bizType" value="Trading / Distribution" class="custom-choice-input" />
+                    <span class="custom-choice-label"><i data-feather="truck" style="width:16px;height:16px;margin-right:8px;"></i> Trading / Distribution</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="bizType" value="Services" class="custom-choice-input" />
+                    <span class="custom-choice-label"><i data-feather="activity" style="width:16px;height:16px;margin-right:8px;"></i> Services / Technology</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="bizType" value="Startup / Early Stage" class="custom-choice-input" />
+                    <span class="custom-choice-label"><i data-feather="zap" style="width:16px;height:16px;margin-right:8px;"></i> Startup / New Business</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 3: Legal Structure -->
+              <div class="step-pane" id="step-3">
+                <h4>What is the legal constitution of your entity?</h4>
+                <p class="step-desc">Legal structure determines guarantor mandates and compliance documentation.</p>
+                <div class="option-grid-3">
+                  <label>
+                    <input type="radio" name="legalStructure" value="Proprietorship" class="custom-choice-input" checked />
+                    <span class="custom-choice-label">Proprietorship</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="legalStructure" value="Partnership" class="custom-choice-input" />
+                    <span class="custom-choice-label">Partnership</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="legalStructure" value="LLP" class="custom-choice-input" />
+                    <span class="custom-choice-label">LLP</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="legalStructure" value="Private Limited" class="custom-choice-input" />
+                    <span class="custom-choice-label">Private Limited</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="legalStructure" value="Public Limited" class="custom-choice-input" />
+                    <span class="custom-choice-label">Public Limited</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="legalStructure" value="Other" class="custom-choice-input" />
+                    <span class="custom-choice-label">Other Entity</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 4: Business Vintage -->
+              <div class="step-pane" id="step-4">
+                <h4>How long has your business been operating?</h4>
+                <p class="step-desc">Most institutional debt programs require a minimum operational track record.</p>
+                <div class="option-grid">
+                  <label>
+                    <input type="radio" name="vintage" value="Under 1 Year" class="custom-choice-input" />
+                    <span class="custom-choice-label">Under 1 Year (Early Stage)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="vintage" value="1 to 3 Years" class="custom-choice-input" />
+                    <span class="custom-choice-label">1 to 3 Years</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="vintage" value="3 to 5 Years" class="custom-choice-input" checked />
+                    <span class="custom-choice-label">3 to 5 Years</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="vintage" value="Over 5 Years" class="custom-choice-input" />
+                    <span class="custom-choice-label">Over 5 Years (Established)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 5: Business Location -->
+              <div class="step-pane" id="step-5">
+                <h4>Where is your primary commercial unit located?</h4>
+                <p class="step-desc">Lenders review branch coverage and state regulatory zones.</p>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                  <div>
+                    <label style="font-size:0.775rem;font-weight:600;display:block;margin-bottom:0.3rem;">City / Industrial Area</label>
+                    <input type="text" id="input-city" class="form-control" placeholder="e.g. Vadodara / Ahmedabad" required />
+                  </div>
+                  <div>
+                    <label style="font-size:0.775rem;font-weight:600;display:block;margin-bottom:0.3rem;">State</label>
+                    <input type="text" id="input-state" class="form-control" placeholder="e.g. Gujarat" required />
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 6: Funding Requirement / Facility Type -->
+              <div class="step-pane" id="step-6">
+                <h4>What type of debt facility are you seeking?</h4>
+                <p class="step-desc">Select the primary financing solution needed.</p>
+                <div class="option-grid">
+                  <label>
+                    <input type="radio" name="facilityType" value="Working Capital (CC/OD)" class="custom-choice-input" checked />
+                    <span class="custom-choice-label">Working Capital (CC / OD)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="facilityType" value="Term Loan (Capex)" class="custom-choice-input" />
+                    <span class="custom-choice-label">Term Loan (Capex / Expansion)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="facilityType" value="Unsecured Business Loan" class="custom-choice-input" />
+                    <span class="custom-choice-label">Unsecured Business Loan</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="facilityType" value="Loan Against Property (LAP)" class="custom-choice-input" />
+                    <span class="custom-choice-label">Loan Against Property (LAP)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="facilityType" value="CGTMSE Scheme Loan" class="custom-choice-input" />
+                    <span class="custom-choice-label">CGTMSE / Scheme Loan</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="facilityType" value="Balance Transfer / Top-Up" class="custom-choice-input" />
+                    <span class="custom-choice-label">Balance Transfer / Top-up</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="facilityType" value="Not Sure / Advisory Needed" class="custom-choice-input" />
+                    <span class="custom-choice-label">Not Sure / Seek Advisory</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 7: Approximate Loan Amount -->
+              <div class="step-pane" id="step-7">
+                <h4>What is the estimated loan quantum required?</h4>
+                <p class="step-desc">Indicative quantum helps match suitable banking tiers (Retail MSME vs. Mid-Corporate).</p>
+                <div class="option-grid">
+                  <label>
+                    <input type="radio" name="loanAmount" value="₹25 Lakhs – ₹50 Lakhs" class="custom-choice-input" />
+                    <span class="custom-choice-label">₹25 Lakhs – ₹50 Lakhs</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="loanAmount" value="₹50 Lakhs – ₹1 Crore" class="custom-choice-input" />
+                    <span class="custom-choice-label">₹50 Lakhs – ₹1 Crore</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="loanAmount" value="₹1 Crore – ₹5 Crores" class="custom-choice-input" checked />
+                    <span class="custom-choice-label">₹1 Crore – ₹5 Crores</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="loanAmount" value="₹5 Crores – ₹15 Crores" class="custom-choice-input" />
+                    <span class="custom-choice-label">₹5 Crores – ₹15 Crores</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="loanAmount" value="Above ₹15 Crores" class="custom-choice-input" />
+                    <span class="custom-choice-label">Above ₹15 Crores (Corporate)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 8: Approximate Annual Turnover -->
+              <div class="step-pane" id="step-8">
+                <h4>What is your approximate annual turnover (latest FY)?</h4>
+                <p class="step-desc">Based on audited financials or filed GSTR-3B annual aggregates.</p>
+                <div class="option-grid">
+                  <label>
+                    <input type="radio" name="turnover" value="Under ₹1 Crore" class="custom-choice-input" />
+                    <span class="custom-choice-label">Under ₹1 Crore</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="turnover" value="₹1 Crore – ₹5 Crores" class="custom-choice-input" />
+                    <span class="custom-choice-label">₹1 Crore – ₹5 Crores</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="turnover" value="₹5 Crores – ₹25 Crores" class="custom-choice-input" checked />
+                    <span class="custom-choice-label">₹5 Crores – ₹25 Crores</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="turnover" value="₹25 Crores – ₹100 Crores" class="custom-choice-input" />
+                    <span class="custom-choice-label">₹25 Crores – ₹100 Crores</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="turnover" value="Above ₹100 Crores" class="custom-choice-input" />
+                    <span class="custom-choice-label">Above ₹100 Crores</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 9: Approximate CIBIL Score -->
+              <div class="step-pane" id="step-9">
+                <h4>Approximate CIBIL Score of Key Promoters / Directors</h4>
+                <p class="step-desc">Self-estimated personal credit history range for managing directors or partners.</p>
+                <div class="option-grid">
+                  <label>
+                    <input type="radio" name="cibilRange" value="Above 750 (Excellent)" class="custom-choice-input" checked />
+                    <span class="custom-choice-label">Above 750 (Prime / Healthy)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="cibilRange" value="700 to 750 (Standard)" class="custom-choice-input" />
+                    <span class="custom-choice-label">700 to 750 (Acceptable)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="cibilRange" value="650 to 700 (Moderate)" class="custom-choice-input" />
+                    <span class="custom-choice-label">650 to 700 (Requires Review)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="cibilRange" value="Below 650 or Not Known" class="custom-choice-input" />
+                    <span class="custom-choice-label">Below 650 / Not Known</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 10: Existing Loans -->
+              <div class="step-pane" id="step-10">
+                <h4>What is the status of existing business debt?</h4>
+                <p class="step-desc">Evaluates existing leverage and whether restructuring is warranted.</p>
+                <div class="option-grid">
+                  <label>
+                    <input type="radio" name="existingLoans" value="No Existing Business Debt" class="custom-choice-input" />
+                    <span class="custom-choice-label">No Existing Commercial Debt</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="existingLoans" value="Under ₹50 Lakhs Existing" class="custom-choice-input" />
+                    <span class="custom-choice-label">Active Debt Under ₹50 Lakhs</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="existingLoans" value="₹50 Lakhs – ₹2 Crores Existing" class="custom-choice-input" checked />
+                    <span class="custom-choice-label">Active Debt ₹50 Lakhs – ₹2 Crores</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="existingLoans" value="Above ₹2 Crores Existing" class="custom-choice-input" />
+                    <span class="custom-choice-label">Active Debt Above ₹2 Crores</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 11: Timeline for Funding -->
+              <div class="step-pane" id="step-11">
+                <h4>When is funding required to be mobilized?</h4>
+                <p class="step-desc">Helps prioritize rapid NBFC lines vs. multi-stage public sector bank sanctioning.</p>
+                <div class="option-grid">
+                  <label>
+                    <input type="radio" name="timeline" value="Immediate (Within 15-30 Days)" class="custom-choice-input" />
+                    <span class="custom-choice-label">Immediate (Within 15–30 Days)</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="timeline" value="Next 30 to 60 Days" class="custom-choice-input" checked />
+                    <span class="custom-choice-label">Next 30 to 60 Days</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="timeline" value="Planning 2 to 3 Months Out" class="custom-choice-input" />
+                    <span class="custom-choice-label">Planning 2 to 3 Months Out</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="timeline" value="Preliminary Exploration Only" class="custom-choice-input" />
+                    <span class="custom-choice-label">Preliminary Market Exploration</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- STEP 12: Contact Details & Submission -->
+              <div class="step-pane" id="step-12">
+                <h4>Where should our advisory team send the assessment?</h4>
+                <p class="step-desc">Please provide official contact details of the authorized promoter or finance manager.</p>
+                <div style="display:flex; flex-direction:column; gap:1rem;">
+                  <div>
+                    <label style="font-size:0.775rem;font-weight:600;display:block;margin-bottom:0.3rem;">Authorized Executive Name *</label>
+                    <input type="text" id="input-contactname" class="form-control" placeholder="e.g. Rajesh Shah" required />
+                  </div>
+                  <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                    <div>
+                      <label style="font-size:0.775rem;font-weight:600;display:block;margin-bottom:0.3rem;">Direct Phone / WhatsApp *</label>
+                      <input type="tel" id="input-contactphone" class="form-control" placeholder="+91 98765 43210" required />
+                    </div>
+                    <div>
+                      <label style="font-size:0.775rem;font-weight:600;display:block;margin-bottom:0.3rem;">Corporate Email *</label>
+                      <input type="email" id="input-contactemail" class="form-control" placeholder="r.shah@company.com" required />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-disclaimer-note">
+                  <strong>Notice:</strong> Submitting this preliminary assessment does not initiate a hard credit inquiry or guarantee sanction. Loan terms and sanctions are governed by respective lender credit assessment.
+                </div>
+              </div>
+
+              <!-- Form Navigation Controls -->
+              <div class="step-nav-footer">
+                <button type="button" id="btnPrevStep" class="btn btn-outline-navy btn-sm" onclick="changeStep(-1)" style="visibility:hidden;">
+                  &larr; Previous Step
+                </button>
+                <button type="button" id="btnNextStep" class="btn btn-primary btn-sm" onclick="changeStep(1)">
+                  Continue &rarr;
+                </button>
+                <button type="submit" id="btnSubmitForm" class="btn btn-accent btn-sm" style="display:none;">
+                  Submit Eligibility Details <i data-feather="check" style="width:14px;height:14px;"></i>
+                </button>
+              </div>
+
+            </form>
+
+            <!-- Success Confirmation Screen -->
+            <div id="eligibilitySuccessCard" style="display:none; text-align:center; padding: 2rem 1rem;">
+              <div style="width:54px;height:54px;background:#eff6ff;color:var(--blue-accent);border:1px solid #bfdbfe;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem auto;">
+                <i data-feather="check-circle" style="width:28px;height:28px;"></i>
+              </div>
+              <h3 style="font-size:1.5rem;margin-bottom:0.5rem;">Eligibility Submission Received</h3>
+              <p style="color:var(--steel-500);max-width:540px;margin:0 auto 1.5rem auto;font-size:0.925rem;line-height:1.6;">
+                Thank you, <strong id="confClientName">Client</strong>. Your commercial parameters have been logged under Reference ID: <strong id="confRefId">BK-2026-0000</strong>.
+              </p>
+              <div style="background:var(--slate-50);border:1px solid var(--border-subtle);padding:1.25rem;border-radius:4px;max-width:520px;margin:0 auto 2rem auto;text-align:left;font-size:0.85rem;">
+                <div style="margin-bottom:0.4rem;"><strong>Facility Requested:</strong> <span id="confFacility">-</span></div>
+                <div style="margin-bottom:0.4rem;"><strong>Indicated Quantum:</strong> <span id="confQuantum">-</span></div>
+                <div><strong>Advisory Next Step:</strong> A Bharath Kapital credit specialist will review these parameters and initiate contact within 24 business hours.</div>
+              </div>
+              <button class="btn btn-primary" onclick="resetEligibilityWizard()">Submit Another Assessment</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CORPORATE ADVISORY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Summary -->
+        <div>
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;">
+            <div style="width:36px;height:36px;background:var(--navy-900);border:1px solid #2563eb;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-weight:700;font-size:1.05rem;border-radius:3px;">BK</div>
+            <span style="font-weight:800;font-size:1.15rem;color:#fff;letter-spacing:-0.01em;">BHARATH <span style="color:#60a5fa;">KAPITAL</span></span>
+          </div>
+          <p style="font-size:0.85rem;line-height:1.65;color:var(--steel-400);margin-bottom:1.5rem;">
+            Specialized financial consulting and loan facilitation firm helping MSMEs, mid-market businesses, and corporate enterprises navigate institutional credit through leading banks and NBFCs.
+          </p>
+          <div style="font-size: 0.8rem; color: var(--steel-400);">
+            <strong>Advisory Desk:</strong> advisory@bharathkapital.com
+          </div>
+        </div>
+
+        <!-- Loan Solutions Links -->
+        <div>
+          <h5 class="footer-title">Loan Solutions</h5>
+          <ul class="footer-list">
+            <li><a onclick="openDetailView('msme')">MSME Business Loans</a></li>
+            <li><a onclick="openDetailView('working-capital')">Working Capital / CC / OD</a></li>
+            <li><a onclick="openDetailView('unsecured')">Unsecured Business Loans</a></li>
+            <li><a onclick="openDetailView('cgtmse')">CGTMSE Scheme Loans</a></li>
+            <li><a onclick="openDetailView('lap')">Loan Against Property (LAP)</a></li>
+            <li><a onclick="openDetailView('machinery')">Machinery &amp; Equipment</a></li>
+            <li><a onclick="openDetailView('discounting')">Invoice / Bill Discounting</a></li>
+          </ul>
+        </div>
+
+        <!-- Company & Process Links -->
+        <div>
+          <h5 class="footer-title">Company</h5>
+          <ul class="footer-list">
+            <li><a onclick="navigateTo('about')">About Bharath Kapital</a></li>
+            <li><a onclick="navigateTo('process')">4-Step Advisory Process</a></li>
+            <li><a onclick="navigateTo('segments')">Sectors &amp; Who We Serve</a></li>
+            <li><a onclick="navigateTo('insights')">Credit Knowledge Base</a></li>
+            <li><a onclick="navigateTo('contact')">Contact &amp; Location</a></li>
+            <li><a onclick="navigateTo('eligibility')">Eligibility Assessment</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Consultation Touchpoints -->
+        <div>
+          <h5 class="footer-title">Engagement</h5>
+          <p style="font-size:0.825rem;color:var(--steel-400);margin-bottom:1rem;line-height:1.6;">
+            Speak directly with an enterprise credit consultant regarding existing debts or proposed capex facilities.
+          </p>
+          <button class="btn btn-accent btn-sm" style="width: 100%; margin-bottom: 0.75rem;" onclick="navigateTo('eligibility')">
+            Check Eligibility
+          </button>
+          <button class="btn btn-outline-white btn-sm" style="width: 100%;" onclick="openModal('Footer Consultation Request')">
+            Request Callback
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Strip & Legal Disclaimer -->
+      <div class="footer-bottom">
+        <div class="footer-disclaimer-box">
+          <strong>Mandatory Institutional Disclaimer:</strong> Bharath Kapital is an independent financial consulting and loan facilitation advisory firm and does not directly lend money, take public deposits, or issue credit approvals. Loan approval, sanctioned amounts, interest rates, tenure, security margins, and all lending covenants are determined solely by the respective lending institution (Banks / NBFCs / Financial Institutions) in accordance with their internal credit policy and applicable RBI regulations.
+        </div>
+
+        <div class="footer-credit-strip">
+          <div>
+            &copy; 2026 Bharath Kapital. All rights reserved. Professional lending advisory demonstration.
+          </div>
+          <div style="display:flex;gap:1.5rem;">
+            <a href="#" onclick="openModal('Privacy Policy'); return false;" style="color:var(--steel-400);text-decoration:none;">Privacy Policy</a>
+            <a href="#" onclick="openModal('Terms & Conditions'); return false;" style="color:var(--steel-400);text-decoration:none;">Terms &amp; Conditions</a>
+            <a href="#" onclick="openModal('Regulatory Disclaimers'); return false;" style="color:var(--steel-400);text-decoration:none;">Disclaimer</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SITE-WIDE RESTRAINED CONTACT WIDGETS
+       ========================================================================== -->
+  <div class="floating-contact-panel">
+    <a href="https://wa.me/919876543210?text=Hello%20Bharath%20Kapital,%20I%20would%20like%20to%20discuss%20a%20business%20funding%20requirement." target="_blank" rel="noopener" class="float-badge-btn float-whatsapp" title="Chat on WhatsApp">
+      <i data-feather="message-circle" style="width:16px;height:16px;"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="tel:+919876543210" class="float-badge-btn float-call" title="Call Advisory Desk">
+      <i data-feather="phone" style="width:16px;height:16px;"></i>
+      <span>Call Desk</span>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL POPUP: ADVISORY CONSULTATION / DETAILS REQUEST
+       ========================================================================== -->
+  <div class="modal-backdrop" id="consultationModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-box">
+      <div class="modal-top">
+        <h4 id="modalHeading">Book a Financial Consultation</h4>
+        <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.85rem;color:var(--steel-500);margin-bottom:1.5rem;" id="modalSubtext">
+          Submit your contact details and business requirements. A lending consultant will get in touch.
+        </p>
+
+        <form id="modalForm" onsubmit="handleModalSubmit(event)">
+          <div style="margin-bottom:1rem;">
+            <label style="display:block;font-size:0.775rem;font-weight:600;margin-bottom:0.3rem;">Company / Business Name *</label>
+            <input type="text" required class="form-control" placeholder="e.g. Vardhman Enterprises" />
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem;">
+            <div>
+              <label style="display:block;font-size:0.775rem;font-weight:600;margin-bottom:0.3rem;">Contact Person *</label>
+              <input type="text" required class="form-control" placeholder="Full Name" />
+            </div>
+            <div>
+              <label style="display:block;font-size:0.775rem;font-weight:600;margin-bottom:0.3rem;">Mobile Number *</label>
+              <input type="tel" required class="form-control" placeholder="+91 98765..." />
+            </div>
+          </div>
+
+          <div style="margin-bottom:1.25rem;">
+            <label style="display:block;font-size:0.775rem;font-weight:600;margin-bottom:0.3rem;">Funding Category</label>
+            <select class="form-control" id="modalSelectFacility">
+              <option>Working Capital / CC / OD</option>
+              <option>MSME Business Loan</option>
+              <option>Machinery &amp; Equipment Finance</option>
+              <option>Loan Against Property</option>
+              <option>Invoice / Bill Discounting</option>
+              <option>CGTMSE Scheme</option>
+              <option>General Funding Review</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Confirm Request
+          </button>
+
+          <div id="modalSuccessMsg" style="display:none;margin-top:1rem;padding:0.75rem;background:#ecfdf5;border:1px solid #10b981;color:#065f46;border-radius:4px;font-size:0.8rem;text-align:center;">
+            Consultation request registered. Our desk will contact you shortly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CLIENT-SIDE ROUTING, LOAN DATA & INTERACTIVE SCRIPTING
+       Zero External Framework Overhead - Migration-ready clean object architecture
+       ========================================================================== -->
+  <script>
+    /* --------------------------------------------------------------------------
+       LOAN DETAIL SPECIFICATION REPOSITORY
+       Structured strictly from legitimate business banking credit criteria
+       -------------------------------------------------------------------------- */
+    const LOAN_REPOSITORY = {
+      'msme': {
+        title: "MSME Business Loans",
+        eyebrow: "Enterprise Capex & Expansion",
+        overview: "Structured debt facilities formulated specifically for registered Micro, Small, and Medium Enterprises (MSMEs). These loans support capital expenditure, plant improvements, modernization, and business expansion, providing predictable structured amortization schedules.",
+        suitable: "Registered MSME manufacturing units, service agencies, and commercial contractors holding active Udyam registrations with an operational vintage of at least two to three fiscal years.",
+        useCases: [
+          "Expansion or upgrading of operating workshop and factory units.",
+          "Procuring bulk inventory or opening new branches/locations.",
+          "Meeting tender security or long-cycle project performance obligations.",
+          "Strengthening balance sheet liquidity during expansion periods."
+        ],
+        processSteps: [
+          "Initial business and financial eligibility assessment by Bharath Kapital.",
+          "Compilation of past 2-3 years audited financial accounts and GST-3B filings.",
+          "Structuring the optimal tenure and margin structure for bank evaluation.",
+          "Proposal submission to target banks/NBFCs matching risk appetite.",
+          "Managing credit queries, sanction letter issuance, and legal disbursement formalities."
+        ],
+        docs: [
+          "Udyam Registration Certificate & Entity PAN/KYC",
+          "Audited Balance Sheet & P&L statements for past 2-3 years with Schedules",
+          "GST returns for the past 12 months (GSTR-1 and GSTR-3B)",
+          "12 months primary current bank account statements",
+          "Promoters & Guarantors KYC, PAN and Aadhaar copies"
+        ],
+        considerations: [
+          "Debt Service Coverage Ratio (DSCR) generally benchmarked at > 1.25x.",
+          "Banking conduct: minimal cheque bounces and consistent credit summations.",
+          "Clean CIBIL profile for key promoters with CMR ranking reviewed for commercial units."
+        ]
+      },
+
+      'unsecured': {
+        title: "Unsecured Business Loans",
+        eyebrow: "Collateral-Free Term Capital",
+        overview: "Short to medium-term debt extended without demanding physical immovable property as collateral. Lenders evaluate sanction eligibility primarily through operational banking conduct, GST cash turnover, profitability trends, and promoter credit scores.",
+        suitable: "Rapidly expanding trading firms, service agencies, distributors, and established MSMEs requiring fast liquidity without tying up immovable property.",
+        useCases: [
+          "Short-term working cash gaps between debtor receivables.",
+          "Capitalizing on urgent bulk purchase cash discounts from suppliers.",
+          "Seasonal inventory build-up ahead of peak demand cycles.",
+          "Urgent marketing, hiring, or administrative operational overheads."
+        ],
+        processSteps: [
+          "Verification of banking flow and GST turnover consistency.",
+          "Determination of borrow capacity based on cash profit and average monthly balance.",
+          "Matching proposal to specialized NBFCs and private banks.",
+          "Digital credit verification and provisional term sheet issuance.",
+          "Executing loan agreements and bank disbursement."
+        ],
+        docs: [
+          "Business registration certificate & Business PAN",
+          "Promoter KYC (Aadhaar, PAN) & residence proof",
+          "12 months of official current bank account PDF statements",
+          "Latest 2 years Income Tax Returns (ITR) with Computation of Income",
+          "Past 12 months GST returns"
+        ],
+        considerations: [
+          "Higher interest rates relative to asset-backed debt.",
+          "Shorter repayment tenures, typically 12 to 36 months.",
+          "Strong promoter credit score (>700 CIBIL) usually mandatory."
+        ]
+      },
+
+      'working-capital': {
+        title: "Working Capital / Cash Credit / Overdraft",
+        eyebrow: "Revolving Operating Liquidity",
+        overview: "Revolving credit facilities tailored to synchronize day-to-day liquidity cycles. Cash Credit (CC) limits are secured against hypothecation of raw materials, stock, and book debts, while Overdrafts (OD) provide drawing capability up to an agreed sanction ceiling.",
+        suitable: "Manufacturing plants with continuous raw material needs, wholesale traders with large credit books, and operational businesses experiencing cash conversion gaps.",
+        useCases: [
+          "Bridging the time gap between vendor payment and client receivable collection.",
+          "Hypothecation against ongoing inventory and work-in-progress stock.",
+          "Drawing interest only on the actual quantum utilized on a day-to-day basis.",
+          "Fulfilling recurring operating expenses such as factory wages and utility bills."
+        ],
+        processSteps: [
+          "Detailed analysis of the operating cash cycle and debtor-creditor holding periods.",
+          "Preparation of Credit Monitoring Arrangement (CMA) data.",
+          "Sanction assessment by bank's working capital underwriting desk.",
+          "Stock audit, legal documentation, and hypothecation charge creation on ROC.",
+          "Setting up the drawing power and operational limit in your current account."
+        ],
+        docs: [
+          "Audited Financials for the past 3 years with complete audit reports",
+          "Detailed CMA data including projected balance sheet and fund flow",
+          "Stock & Book Debt statement (latest provisional)",
+          "12 months statements of all active banking and loan accounts",
+          "GST-3B returns along with annual GSTR-9 if applicable"
+        ],
+        considerations: [
+          "Requires monthly submission of stock and debtor statements to maintain Drawing Power.",
+          "Annual facility review and renewal mandated by institutional lenders.",
+          "Drawing Power (DP) calculated after applying standard bank margin deductions (e.g. 25% on stock, 30-40% on debtors)."
+        ]
+      },
+
+      'cgtmse': {
+        title: "CGTMSE & Government Scheme Loans",
+        eyebrow: "Credit Guarantee Framework",
+        overview: "Credit facilities structured under the Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) setup by the Ministry of MSME and SIDBI. The scheme enables eligible small businesses to obtain institutional funding without having to pledge third-party immovable collateral.",
+        suitable: "Viable Micro and Small manufacturing enterprises, diagnostic centers, and service providers lacking adequate personal real estate collateral to pledge against standard bank loans.",
+        useCases: [
+          "Setting up greenfield micro manufacturing units.",
+          "Acquiring indigenous plant machinery without mortgaging residential properties.",
+          "Collateral-free working capital lines for technology and service providers.",
+          "Scaling operational capacity of existing MSEs."
+        ],
+        processSteps: [
+          "Eligibility verification under official MSE definitions and non-excluded activity list.",
+          "Project report preparation including operational viability and DSCR metrics.",
+          "Submission to member lending institutions (nationalized & private commercial banks).",
+          "Sanction under the CGTMSE guarantee trust framework.",
+          "Payment of statutory guarantee fee and loan execution."
+        ],
+        docs: [
+          "Udyam MSE Registration Certificate",
+          "Comprehensive Detailed Project Report (DPR) with viability calculations",
+          "Proforma invoices for proposed equipment / plant acquisition",
+          "Promoter educational/technical background profile and personal KYC",
+          "Past 2 years ITR and financial history (for existing units)"
+        ],
+        considerations: [
+          "Guaranteed coverage is between the lending institution and the Trust.",
+          "The borrower remains fully legally liable for loan repayment.",
+          "Annual guarantee fee payable to CGTMSE in addition to bank interest margins."
+        ]
+      },
+
+      'lap': {
+        title: "Loan Against Property (LAP)",
+        eyebrow: "High-Quantum Long-Tenor Debt",
+        overview: "Secured debt instrument providing substantial capital by mortgaging clear-title commercial, industrial, or residential real estate assets. Offers significantly lower interest rates and extended repayment tenors compared to clean business credit.",
+        suitable: "Businesses holding owned commercial shops, industrial plots, warehouse properties, or promoters willing to mortgage self-occupied residential real estate for substantial, cost-effective capital.",
+        useCases: [
+          "Long-term structural capital expenditure and capacity expansions.",
+          "Consolidating multiple high-cost unsecured business loans into single low-interest EMI.",
+          "Funding new plant establishment or corporate branch additions.",
+          "Creating permanent long-term liquidity reserves."
+        ],
+        processSteps: [
+          "Preliminary property valuation and clear legal title check.",
+          "Financial assessment to establish loan serviceability and EMI affordability.",
+          "Legal title search and independent technical evaluation by bank empanelled advocates.",
+          "Sanction letter issuance with defined Loan-to-Value (LTV) limits.",
+          "Equitable mortgage creation, ROC charge registration, and disbursement."
+        ],
+        docs: [
+          "Complete property title deeds tracing continuous ownership history for 13 to 30 years",
+          "Approved building plan, sanctioned map, and latest paid tax receipts",
+          "Past 3 years audited balance sheets, profit & loss, and computation of income",
+          "12 months bank statements from all operative business accounts",
+          "Entity registration, KYC, and promoter identity documentation"
+        ],
+        considerations: [
+          "LTV (Loan-to-Value) typically ranges from 50% to 70% of real market value.",
+          "Requires encumbrance-free title without pending legal disputes.",
+          "Extended tenures of up to 10 to 15 years depending on asset and entity age."
+        ]
+      },
+
+      'machinery': {
+        title: "Machinery & Equipment Finance",
+        eyebrow: "Productive Asset Acquisition",
+        overview: "Dedicated asset financing specifically created to acquire industrial machinery, manufacturing lines, CNC tooling, packaging systems, and medical diagnostics hardware. The purchased machine itself forms the primary hypothecated collateral.",
+        suitable: "Engineering units, textile producers, printing presses, plastic molding manufacturers, and healthcare enterprises modernizing or adding plant capacity.",
+        useCases: [
+          "Purchasing automated CNC machinery or assembly line equipment.",
+          "Adding secondary packaging and processing plant lines.",
+          "Upgrading outdated tools to reduce factory downtime and enhance output.",
+          "Procuring imported or indigenous equipment from authorized OEMs."
+        ],
+        processSteps: [
+          "Review of supplier OEM quotation and technical proforma invoice.",
+          "Evaluating projected production output and revenue impact of the machine.",
+          "Submission to banks and NBFCs with active machinery lending desks.",
+          "Direct disbursement to the equipment manufacturer/vendor against delivery milestones.",
+          "Asset verification and hypothecation charge stamping."
+        ],
+        docs: [
+          "Proforma Invoice / Quotation directly from the authorized equipment OEM",
+          "Machine technical specifications and capacity rationale",
+          "Last 2 years audited balance sheets and current year interim performance",
+          "6 to 12 months primary banking statements",
+          "Business entity KYC and industrial premise electricity bill / lease proof"
+        ],
+        considerations: [
+          "Borrower must generally contribute 15% to 25% margin money as down payment.",
+          "Loan tenors usually calibrated to 3 to 7 years matching depreciation life.",
+          "Lender maintains first hypothecation charge on the financed asset."
+        ]
+      },
+
+      'corporate': {
+        title: "Corporate Loans & Debt Syndication",
+        eyebrow: "Mid-Market & Large Debt Packages",
+        overview: "Tailored debt programs designed for mid-market corporates and large enterprises requiring complex debt syndication, multi-bank consortium lending arrangements, and long-term project debt.",
+        suitable: "Companies generating ₹25 Crores+ turnover requiring syndicated debt, consortium banking coordination, or bespoke structured financial solutions.",
+        useCases: [
+          "Greenfield or brownfield industrial project setups.",
+          "Multi-bank working capital consortium formations or expansions.",
+          "Structured corporate recapitalizations and balance sheet realignment.",
+          "Strategic acquisitions and Capex funding."
+        ],
+        processSteps: [
+          "Comprehensive corporate financial health check and credit rating evaluation.",
+          "Formulation of Information Memorandum (IM) and detailed financial model.",
+          "Pitching to public/private sector bank syndication desks and credit committees.",
+          "Lead bank sanction negotiation and inter-creditor coordination.",
+          "Consortium documentation, security perfection, and phased project drawdown."
+        ],
+        docs: [
+          "3 to 5 years audited financials with detailed notes to accounts",
+          "Comprehensive Detailed Project Report (DPR) & Techno-Economic Viability (TEV) study",
+          "External credit rating agency reports (CRISIL / ICRA / CARE / India Ratings)",
+          "Group corporate structure, subsidiary details, and promoter net worth certificates",
+          "Consortium sanction letters and past borrowing records"
+        ],
+        considerations: [
+          "Requires external credit rating benchmarks and strict covenant compliance.",
+          "Complex legal documentation including Inter-Creditor Agreements (ICA).",
+          "Phased disbursements benchmarked to verified site engineering milestones."
+        ]
+      },
+
+      'discounting': {
+        title: "Invoice & Bill Discounting",
+        eyebrow: "Receivables Liquidity Acceleration",
+        overview: "Financial arrangement where your business receives early cash advances against verified commercial invoices raised on corporate buyers, bypassing 60 to 120-day credit settlement delays.",
+        suitable: "Suppliers, vendors, and contractors serving high-grade large corporate enterprises, multinational companies, and public sector undertakings.",
+        useCases: [
+          "Freeing up working cash trapped in extended corporate payment cycles.",
+          "Maintaining immediate supplier payments to negotiate cash discounts.",
+          "Preventing cash shortfalls while fulfilling back-to-back supply contracts.",
+          "Strengthening balance sheet flexibility without creating long-term term debt."
+        ],
+        processSteps: [
+          "Assessment of debtor quality and corporate buyer credit standing.",
+          "Setting up the discounting facility with institutional lender or factoring desk.",
+          "Submission of verified invoices, proof of delivery (POD), and acceptance notes.",
+          "Advance disbursement of 80% to 90% invoice value within 24-48 hours.",
+          "Full settlement once the corporate buyer remits funds at invoice due date."
+        ],
+        docs: [
+          "Valid corporate purchase orders (PO) and client supply contracts",
+          "Tax invoices raised with corresponding Proof of Delivery (LR / POD / Gate Pass)",
+          "Debtor ledger showing historical payment timelines for past 12 months",
+          "Business entity KYC, GST certificates, and audited financial statements",
+          "6 months operative bank statements showing regular debtor collections"
+        ],
+        considerations: [
+          "Appraisal focuses substantially on the balance sheet strength of your corporate buyer.",
+          "Invoices must be clear, dispute-free, and legally acknowledged.",
+          "Structured with or without recourse depending on institution risk appetite."
+        ]
+      },
+
+      'balance-transfer': {
+        title: "Balance Transfer & Debt Restructuring",
+        eyebrow: "Liability Realignment & Top-Up",
+        overview: "Refinancing existing term debt, LAP, or working capital facilities from current lenders to new institutional lenders to capture lower interest spreads, extended amortizations, or critical top-up limits.",
+        suitable: "Enterprises whose credit profile has strengthened since original loan sanction, or businesses burdened by excessive high-interest debt requiring consolidation.",
+        useCases: [
+          "Reducing overall interest expense and improving monthly operating cash flow.",
+          "Securing additional top-up debt on previously mortgaged real estate.",
+          "Merging multiple fragmented loans into a unified, disciplined banking arrangement.",
+          "Replacing restrictive covenants and releasing collateral surplus."
+        ],
+        processSteps: [
+          "Comprehensive review of current sanction letters, interest rates, and loan schedules.",
+          "Cost-benefit analysis factoring in foreclosure charges, stamp duties, and new fees.",
+          "Approaching competitive institutions with your upgraded financial track record.",
+          "Securing formal sanction letter with reduced margins and requested top-up.",
+          "Taking over debt via take-out cheque, securing title deeds, and registering new charge."
+        ],
+        docs: [
+          "Foreclosure statement & list of title documents held by current lender",
+          "Sanction letters of all currently active credit facilities",
+          "12 to 24 months clean repayment track record (SOA) without late payments",
+          "Past 2-3 years audited financial statements and filed GST records",
+          "Latest property valuation / security documents for pledged assets"
+        ],
+        considerations: [
+          "Clean payment history on active loans is essential (zero 30+ DPD defaults).",
+          "Verify foreclosure terms and stamp duty expenses to ensure clear net financial gain.",
+          "Lender requires direct release of title deeds under standard take-out protocols."
+        ]
+      }
+    };
+
+    /* --------------------------------------------------------------------------
+       SINGLE PAGE APPLICATION (SPA) ROUTING CONTROLLER
+       -------------------------------------------------------------------------- */
+    function navigateTo(viewId) {
+      // Close mobile menu if active
+      const navMenu = document.getElementById('mainNavMenu');
+      if (navMenu.classList.contains('mobile-open')) {
+        navMenu.classList.remove('mobile-open');
+      }
+
+      // Deactivate all view panes
+      const views = document.querySelectorAll('.view-page');
+      views.forEach(v => v.classList.remove('active-view'));
+
+      // Activate target view
+      const targetView = document.getElementById('view-' + viewId);
+      if (targetView) {
+        targetView.classList.add('active-view');
+      } else {
+        document.getElementById('view-home').classList.add('active-view');
+      }
+
+      // Update Nav active indicator
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(l => l.classList.remove('active'));
+      navLinks.forEach(l => {
+        if (l.getAttribute('onclick') && l.getAttribute('onclick').includes(viewId)) {
+          l.classList.add('active');
+        }
+      });
+
+      // Window scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Refresh Feather Icons
+      if (window.feather) {
+        feather.replace();
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       OPEN INDIVIDUAL LOAN DETAIL VIEW
+       -------------------------------------------------------------------------- */
+    function openDetailView(loanKey) {
+      const data = LOAN_REPOSITORY[loanKey];
+      if (!data) return;
+
+      document.getElementById('detailEyebrow').textContent = data.eyebrow;
+      document.getElementById('detailTitle').textContent = data.title;
+      document.getElementById('detailOverview').textContent = data.overview;
+      document.getElementById('detailSuitable').textContent = data.suitable;
+
+      // Use cases list
+      const useCasesUl = document.getElementById('detailUseCases');
+      useCasesUl.innerHTML = '';
+      data.useCases.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        useCasesUl.appendChild(li);
+      });
+
+      // Process steps ordered list
+      const processOl = document.getElementById('detailProcessSteps');
+      processOl.innerHTML = '';
+      data.processSteps.forEach(step => {
+        const li = document.createElement('li');
+        li.textContent = step;
+        processOl.appendChild(li);
+      });
+
+      // Documentation list
+      const docsUl = document.getElementById('detailDocs');
+      docsUl.innerHTML = '';
+      data.docs.forEach(doc => {
+        const li = document.createElement('li');
+        li.style.display = 'flex';
+        li.style.gap = '0.5rem';
+        li.style.alignItems = 'flex-start';
+        li.innerHTML = `<i data-feather="check" style="width:14px;height:14px;color:var(--blue-accent);flex-shrink:0;margin-top:3px;"></i><span>${doc}</span>`;
+        docsUl.appendChild(li);
+      });
+
+      // Appraisal Considerations list
+      const considerUl = document.getElementById('detailConsiderations');
+      considerUl.innerHTML = '';
+      data.considerations.forEach(c => {
+        const li = document.createElement('li');
+        li.style.display = 'flex';
+        li.style.gap = '0.5rem';
+        li.style.alignItems = 'flex-start';
+        li.innerHTML = `<i data-feather="alert-circle" style="width:14px;height:14px;color:var(--navy-900);flex-shrink:0;margin-top:3px;"></i><span>${c}</span>`;
+        considerUl.appendChild(li);
+      });
+
+      // Switch to detail view
+      navigateTo('loan-detail');
+    }
+
+    /* --------------------------------------------------------------------------
+       MOBILE NAVIGATION DRAWER TOGGLE
+       -------------------------------------------------------------------------- */
+    function toggleMobileNav() {
+      const menu = document.getElementById('mainNavMenu');
+      menu.classList.toggle('mobile-open');
+    }
+
+    /* --------------------------------------------------------------------------
+       SECTOR TABS SWITCHER
+       -------------------------------------------------------------------------- */
+    function switchSectorTab(e, tabId) {
+      const buttons = document.querySelectorAll('.sector-tab-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      e.currentTarget.classList.add('active');
+
+      const contents = document.querySelectorAll('.sector-tab-content');
+      contents.forEach(c => c.classList.remove('active'));
+
+      const target = document.getElementById(tabId);
+      if (target) {
+        target.classList.add('active');
+      }
+
+      if (window.feather) feather.replace();
+    }
+
+    /* --------------------------------------------------------------------------
+       FUNCTIONAL FAQ ACCORDION
+       -------------------------------------------------------------------------- */
+    function toggleAccordion(headerBtn) {
+      const item = headerBtn.parentElement;
+      const isOpen = item.classList.contains('open');
+
+      // Close all other items for neat institutional look
+      const allItems = document.querySelectorAll('.accordion-item');
+      allItems.forEach(i => i.classList.remove('open'));
+
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    }
+
+    /* --------------------------------------------------------------------------
+       12-STEP ELIGIBILITY WIZARD CONTROLLER
+       Full frontend validation & progress calculation
+       -------------------------------------------------------------------------- */
+    let currentStep = 1;
+    const totalSteps = 12;
+
+    function updateStepUI() {
+      // Hide all step panes
+      for (let i = 1; i <= totalSteps; i++) {
+        const pane = document.getElementById('step-' + i);
+        if (pane) pane.classList.remove('active-step');
+      }
+
+      // Show current pane
+      const activePane = document.getElementById('step-' + currentStep);
+      if (activePane) activePane.classList.add('active-step');
+
+      // Update counter and progress bar
+      document.getElementById('stepCounterText').textContent = `Step ${currentStep} of ${totalSteps}`;
+      const percentage = (currentStep / totalSteps) * 100;
+      document.getElementById('progressFill').style.width = percentage + '%';
+
+      // Previous button visibility
+      const btnPrev = document.getElementById('btnPrevStep');
+      if (currentStep === 1) {
+        btnPrev.style.visibility = 'hidden';
+      } else {
+        btnPrev.style.visibility = 'visible';
+      }
+
+      // Next / Submit button toggle
+      const btnNext = document.getElementById('btnNextStep');
+      const btnSubmit = document.getElementById('btnSubmitForm');
+      if (currentStep === totalSteps) {
+        btnNext.style.display = 'none';
+        btnSubmit.style.display = 'inline-flex';
+      } else {
+        btnNext.style.display = 'inline-flex';
+        btnSubmit.style.display = 'none';
+      }
+
+      if (window.feather) feather.replace();
+    }
+
+    function changeStep(delta) {
+      // Validate inputs before moving forward
+      if (delta > 0) {
+        if (currentStep === 1) {
+          const val = document.getElementById('input-bizname').value.trim();
+          if (!val) {
+            alert('Please enter your registered entity or business name.');
+            document.getElementById('input-bizname').focus();
+            return;
+          }
+        }
+        if (currentStep === 5) {
+          const city = document.getElementById('input-city').value.trim();
+          const state = document.getElementById('input-state').value.trim();
+          if (!city || !state) {
+            alert('Please provide your business city and state location.');
+            return;
+          }
+        }
+      }
+
+      currentStep += delta;
+      if (currentStep < 1) currentStep = 1;
+      if (currentStep > totalSteps) currentStep = totalSteps;
+
+      updateStepUI();
+    }
+
+    function handleEligibilitySubmit(e) {
+      e.preventDefault();
+
+      // Final step validation
+      const name = document.getElementById('input-contactname').value.trim();
+      const phone = document.getElementById('input-contactphone').value.trim();
+      const email = document.getElementById('input-contactemail').value.trim();
+
+      if (!name || !phone || !email) {
+        alert('Please complete all contact details so we can furnish your assessment.');
+        return;
+      }
+
+      // Collect data from form
+      const bizName = document.getElementById('input-bizname').value.trim();
+      const facility = document.querySelector('input[name="facilityType"]:checked')?.value || 'Debt Advisory';
+      const quantum = document.querySelector('input[name="loanAmount"]:checked')?.value || 'Standard Quantum';
+
+      // Generate reference
+      const refNumber = 'BK-' + Math.floor(100000 + Math.random() * 900000);
+
+      // Populate confirmation state
+      document.getElementById('confClientName').textContent = name + ' (' + bizName + ')';
+      document.getElementById('confRefId').textContent = refNumber;
+      document.getElementById('confFacility').textContent = facility;
+      document.getElementById('confQuantum').textContent = quantum;
+
+      // Transition display
+      document.getElementById('multiStepForm').style.display = 'none';
+      document.getElementById('eligibilitySuccessCard').style.display = 'block';
+
+      if (window.feather) feather.replace();
+    }
+
+    function resetEligibilityWizard() {
+      currentStep = 1;
+      document.getElementById('multiStepForm').reset();
+      document.getElementById('multiStepForm').style.display = 'block';
+      document.getElementById('eligibilitySuccessCard').style.display = 'none';
+      updateStepUI();
+    }
+
+    /* --------------------------------------------------------------------------
+       ADVISORY MODAL SYSTEM
+       -------------------------------------------------------------------------- */
+    function openModal(headingContext) {
+      const modal = document.getElementById('consultationModal');
+      if (headingContext) {
+        document.getElementById('modalHeading').textContent = headingContext;
+      }
+      modal.classList.add('open');
+      if (window.feather) feather.replace();
+    }
+
+    function closeModal() {
+      document.getElementById('consultationModal').classList.remove('open');
+      document.getElementById('modalForm').reset();
+      document.getElementById('modalSuccessMsg').style.display = 'none';
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'consultationModal') {
+        closeModal();
+      }
+    }
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      document.getElementById('modalSuccessMsg').style.display = 'block';
+      setTimeout(() => {
+        closeModal();
+      }, 2400);
+    }
+
+    /* --------------------------------------------------------------------------
+       CONTACT FORM SUBMITTER
+       -------------------------------------------------------------------------- */
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const msg = document.getElementById('contactSuccessMsg');
+      msg.style.display = 'block';
+      e.target.reset();
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 5000);
+    }
+
+    /* --------------------------------------------------------------------------
+       INITIALIZATION
+       -------------------------------------------------------------------------- */
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.feather) {
+        feather.replace();
+      }
+      updateStepUI();
+    });
+  </script>
+</body>
+</html>
